@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8D763351D792A2800A720FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763341D792A2800A720FE /* main.m */; };
+		F8D763381D792A2800A720FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763371D792A2800A720FE /* AppDelegate.m */; };
+		F8D7633B1D792A2800A720FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D7633A1D792A2800A720FE /* ViewController.m */; };
+		F8D7633E1D792A2800A720FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8D7633C1D792A2800A720FE /* Main.storyboard */; };
+		F8D763411D792A2800A720FE /* NiceArticle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8D7633F1D792A2800A720FE /* NiceArticle.xcdatamodeld */; };
+		F8D763431D792A2800A720FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D763421D792A2800A720FE /* Assets.xcassets */; };
+		F8D763461D792A2800A720FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8D763441D792A2800A720FE /* LaunchScreen.storyboard */; };
+		F8D763561D792CD200A720FE /* NAMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763551D792CD200A720FE /* NAMineViewController.m */; };
+		F8D7635B1D792F0800A720FE /* NAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D7635A1D792F0800A720FE /* NAHomeViewController.m */; };
+		F8D7635E1D79319600A720FE /* NAMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D7635D1D79319600A720FE /* NAMainViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F8D763301D792A2800A720FE /* NiceArticle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiceArticle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8D763341D792A2800A720FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F8D763361D792A2800A720FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F8D763371D792A2800A720FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F8D763391D792A2800A720FE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F8D7633A1D792A2800A720FE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F8D7633D1D792A2800A720FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F8D763401D792A2800A720FE /* NiceArticle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NiceArticle.xcdatamodel; sourceTree = "<group>"; };
+		F8D763421D792A2800A720FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8D763451D792A2800A720FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F8D763471D792A2800A720FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8D763541D792CD200A720FE /* NAMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAMineViewController.h; path = mine/NAMineViewController.h; sourceTree = "<group>"; };
+		F8D763551D792CD200A720FE /* NAMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAMineViewController.m; path = mine/NAMineViewController.m; sourceTree = "<group>"; };
+		F8D763591D792F0800A720FE /* NAHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAHomeViewController.h; path = modules/home/NAHomeViewController.h; sourceTree = "<group>"; };
+		F8D7635A1D792F0800A720FE /* NAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAHomeViewController.m; path = modules/home/NAHomeViewController.m; sourceTree = "<group>"; };
+		F8D7635C1D79319600A720FE /* NAMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAMainViewController.h; path = modules/home/NAMainViewController.h; sourceTree = "<group>"; };
+		F8D7635D1D79319600A720FE /* NAMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAMainViewController.m; path = modules/home/NAMainViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8D7632D1D792A2800A720FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8D763271D792A2800A720FE = {
+			isa = PBXGroup;
+			children = (
+				F8D763321D792A2800A720FE /* NiceArticle */,
+				F8D763311D792A2800A720FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8D763311D792A2800A720FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8D763301D792A2800A720FE /* NiceArticle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8D763321D792A2800A720FE /* NiceArticle */ = {
+			isa = PBXGroup;
+			children = (
+				F8D7634E1D792AA100A720FE /* modules */,
+				F8D763361D792A2800A720FE /* AppDelegate.h */,
+				F8D763371D792A2800A720FE /* AppDelegate.m */,
+				F8D763391D792A2800A720FE /* ViewController.h */,
+				F8D7633A1D792A2800A720FE /* ViewController.m */,
+				F8D7633C1D792A2800A720FE /* Main.storyboard */,
+				F8D763421D792A2800A720FE /* Assets.xcassets */,
+				F8D763441D792A2800A720FE /* LaunchScreen.storyboard */,
+				F8D763471D792A2800A720FE /* Info.plist */,
+				F8D7633F1D792A2800A720FE /* NiceArticle.xcdatamodeld */,
+				F8D763331D792A2800A720FE /* Supporting Files */,
+			);
+			path = NiceArticle;
+			sourceTree = "<group>";
+		};
+		F8D763331D792A2800A720FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8D763341D792A2800A720FE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8D7634E1D792AA100A720FE /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				F8D763531D792CA200A720FE /* mine */,
+				F8D7634F1D792AAD00A720FE /* home */,
+			);
+			name = modules;
+			sourceTree = "<group>";
+		};
+		F8D7634F1D792AAD00A720FE /* home */ = {
+			isa = PBXGroup;
+			children = (
+				F8D763591D792F0800A720FE /* NAHomeViewController.h */,
+				F8D7635A1D792F0800A720FE /* NAHomeViewController.m */,
+				F8D7635C1D79319600A720FE /* NAMainViewController.h */,
+				F8D7635D1D79319600A720FE /* NAMainViewController.m */,
+			);
+			name = home;
+			sourceTree = "<group>";
+		};
+		F8D763531D792CA200A720FE /* mine */ = {
+			isa = PBXGroup;
+			children = (
+				F8D763541D792CD200A720FE /* NAMineViewController.h */,
+				F8D763551D792CD200A720FE /* NAMineViewController.m */,
+			);
+			name = mine;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8D7632F1D792A2800A720FE /* NiceArticle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8D7634A1D792A2800A720FE /* Build configuration list for PBXNativeTarget "NiceArticle" */;
+			buildPhases = (
+				F8D7632C1D792A2800A720FE /* Sources */,
+				F8D7632D1D792A2800A720FE /* Frameworks */,
+				F8D7632E1D792A2800A720FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NiceArticle;
+			productName = NiceArticle;
+			productReference = F8D763301D792A2800A720FE /* NiceArticle.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8D763281D792A2800A720FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = WhiteElephant;
+				TargetAttributes = {
+					F8D7632F1D792A2800A720FE = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = T295MMEZ9W;
+					};
+				};
+			};
+			buildConfigurationList = F8D7632B1D792A2800A720FE /* Build configuration list for PBXProject "NiceArticle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8D763271D792A2800A720FE;
+			productRefGroup = F8D763311D792A2800A720FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8D7632F1D792A2800A720FE /* NiceArticle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8D7632E1D792A2800A720FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8D763461D792A2800A720FE /* LaunchScreen.storyboard in Resources */,
+				F8D763431D792A2800A720FE /* Assets.xcassets in Resources */,
+				F8D7633E1D792A2800A720FE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8D7632C1D792A2800A720FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8D7633B1D792A2800A720FE /* ViewController.m in Sources */,
+				F8D763561D792CD200A720FE /* NAMineViewController.m in Sources */,
+				F8D7635E1D79319600A720FE /* NAMainViewController.m in Sources */,
+				F8D7635B1D792F0800A720FE /* NAHomeViewController.m in Sources */,
+				F8D763381D792A2800A720FE /* AppDelegate.m in Sources */,
+				F8D763351D792A2800A720FE /* main.m in Sources */,
+				F8D763411D792A2800A720FE /* NiceArticle.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F8D7633C1D792A2800A720FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8D7633D1D792A2800A720FE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F8D763441D792A2800A720FE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8D763451D792A2800A720FE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8D763481D792A2800A720FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8D763491D792A2800A720FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8D7634B1D792A2800A720FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NiceArticle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.WhiteElephant.NiceArticle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F8D7634C1D792A2800A720FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NiceArticle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.WhiteElephant.NiceArticle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8D7632B1D792A2800A720FE /* Build configuration list for PBXProject "NiceArticle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8D763481D792A2800A720FE /* Debug */,
+				F8D763491D792A2800A720FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8D7634A1D792A2800A720FE /* Build configuration list for PBXNativeTarget "NiceArticle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8D7634B1D792A2800A720FE /* Debug */,
+				F8D7634C1D792A2800A720FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F8D7633F1D792A2800A720FE /* NiceArticle.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F8D763401D792A2800A720FE /* NiceArticle.xcdatamodel */,
+			);
+			currentVersion = F8D763401D792A2800A720FE /* NiceArticle.xcdatamodel */;
+			path = NiceArticle.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F8D763281D792A2800A720FE /* Project object */;
+}
