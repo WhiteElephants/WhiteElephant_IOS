@@ -10,6 +10,8 @@
 #import "NAHomeViewController.h"
 #import "NAMineViewController.h"
 #import "NAMainViewController.h"
+#import "NACaoGaoViewController.h"
+#import "NAFindViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,8 +26,10 @@
     NAMainViewController *mainViewController=[[NAMainViewController alloc]init];
     NAHomeViewController *homeViewController=[[NAHomeViewController alloc]init];
     NAMineViewController *mineViewController=[[NAMineViewController alloc]init];
+    NACaoGaoViewController *caoGaoViewController=[[NACaoGaoViewController alloc]init];
+    NAFindViewController *findViewController=[[NAFindViewController alloc]init];
     
-    [mainViewController setViewControllers:@[homeViewController,mineViewController]];
+    [mainViewController setViewControllers:@[homeViewController,findViewController,caoGaoViewController,mineViewController]];
     
     //注意默认情况下UITabBarController在加载子视图时是懒加载的，所以这里调用一次contactController，
     //否则在第一次展示时只有第一个控制器tab图标，contactController的tab图标不会显示

@@ -17,6 +17,8 @@
 		F8D763561D792CD200A720FE /* NAMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763551D792CD200A720FE /* NAMineViewController.m */; };
 		F8D7635B1D792F0800A720FE /* NAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D7635A1D792F0800A720FE /* NAHomeViewController.m */; };
 		F8D7635E1D79319600A720FE /* NAMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D7635D1D79319600A720FE /* NAMainViewController.m */; };
+		F8D763621D794B7F00A720FE /* NAFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763611D794B7F00A720FE /* NAFindViewController.m */; };
+		F8D763661D794C1600A720FE /* NACaoGaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763651D794C1600A720FE /* NACaoGaoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		F8D7635A1D792F0800A720FE /* NAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAHomeViewController.m; path = modules/home/NAHomeViewController.m; sourceTree = "<group>"; };
 		F8D7635C1D79319600A720FE /* NAMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAMainViewController.h; path = modules/home/NAMainViewController.h; sourceTree = "<group>"; };
 		F8D7635D1D79319600A720FE /* NAMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAMainViewController.m; path = modules/home/NAMainViewController.m; sourceTree = "<group>"; };
+		F8D763601D794B7F00A720FE /* NAFindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAFindViewController.h; path = find/NAFindViewController.h; sourceTree = "<group>"; };
+		F8D763611D794B7F00A720FE /* NAFindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAFindViewController.m; path = find/NAFindViewController.m; sourceTree = "<group>"; };
+		F8D763641D794C1600A720FE /* NACaoGaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NACaoGaoViewController.h; path = caogao/NACaoGaoViewController.h; sourceTree = "<group>"; };
+		F8D763651D794C1600A720FE /* NACaoGaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NACaoGaoViewController.m; path = caogao/NACaoGaoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,8 @@
 		F8D7634E1D792AA100A720FE /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				F8D763631D794BFA00A720FE /* caogao */,
+				F8D7635F1D794B4D00A720FE /* find */,
 				F8D763531D792CA200A720FE /* mine */,
 				F8D7634F1D792AAD00A720FE /* home */,
 			);
@@ -119,6 +127,24 @@
 				F8D763551D792CD200A720FE /* NAMineViewController.m */,
 			);
 			name = mine;
+			sourceTree = "<group>";
+		};
+		F8D7635F1D794B4D00A720FE /* find */ = {
+			isa = PBXGroup;
+			children = (
+				F8D763601D794B7F00A720FE /* NAFindViewController.h */,
+				F8D763611D794B7F00A720FE /* NAFindViewController.m */,
+			);
+			name = find;
+			sourceTree = "<group>";
+		};
+		F8D763631D794BFA00A720FE /* caogao */ = {
+			isa = PBXGroup;
+			children = (
+				F8D763641D794C1600A720FE /* NACaoGaoViewController.h */,
+				F8D763651D794C1600A720FE /* NACaoGaoViewController.m */,
+			);
+			name = caogao;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8D763661D794C1600A720FE /* NACaoGaoViewController.m in Sources */,
+				F8D763621D794B7F00A720FE /* NAFindViewController.m in Sources */,
 				F8D7633B1D792A2800A720FE /* ViewController.m in Sources */,
 				F8D763561D792CD200A720FE /* NAMineViewController.m in Sources */,
 				F8D7635E1D79319600A720FE /* NAMainViewController.m in Sources */,

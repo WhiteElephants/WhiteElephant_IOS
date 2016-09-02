@@ -20,8 +20,9 @@
     [[self view] setBackgroundColor:[UIColor redColor]];
     
     [[self tabBarItem]setTitle:@"首页"];
-    [[self tabBarItem]setImage:[UIImage imageNamed:@"首页"]];
-    [[self tabBarItem]setSelectedImage:[UIImage imageNamed:@""]];
+    [[self tabBarItem]setImage:[UIImage imageNamed:@"ic_menu_home.png"]];
+    [[self tabBarItem]setSelectedImage:[UIImage imageNamed:@"ic_menu_home.png"]];
+    self.tabBarItem.badgeValue=@"1";//图标右上角内容
 }
 
 - (void)didReceiveMemoryWarning {
