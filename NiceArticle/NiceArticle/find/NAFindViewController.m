@@ -25,7 +25,7 @@
     self.tabBarItem.title=@"发现";//注意如果这个标题不设置默认在页签上显示视图控制器标题
     self.tabBarItem.image=[UIImage imageNamed:@"ic_menu_search.png"];//默认图片
     self.tabBarItem.selectedImage=[UIImage imageNamed:@"ic_menu_search.png"];//选中图片
-    self.tabBarItem.badgeValue=@"2";//图标右上角内容
+    //self.tabBarItem.badgeValue=@"2";//图标右上角内容
     //====<<<< 设置图标、标题(tabBarItem是显示在tabBar上的标签) end   ==========================================
 }
 
