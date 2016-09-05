@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62BB07076A9E0B459D9B1E8E /* Pods_NiceArticle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6114C3CD9DCA66ABE508696 /* Pods_NiceArticle.framework */; };
 		F8D763351D792A2800A720FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763341D792A2800A720FE /* main.m */; };
 		F8D763381D792A2800A720FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763371D792A2800A720FE /* AppDelegate.m */; };
 		F8D7633B1D792A2800A720FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D7633A1D792A2800A720FE /* ViewController.m */; };
@@ -25,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31B5C892AA1A0EDECB0D12A9 /* Pods-NiceArticle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceArticle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle.debug.xcconfig"; sourceTree = "<group>"; };
+		AF4885BD70387C59DCDCDA67 /* Pods-NiceArticle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceArticle.release.xcconfig"; path = "Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle.release.xcconfig"; sourceTree = "<group>"; };
+		B6114C3CD9DCA66ABE508696 /* Pods_NiceArticle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiceArticle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D763301D792A2800A720FE /* NiceArticle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiceArticle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D763341D792A2800A720FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8D763361D792A2800A720FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -59,17 +63,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62BB07076A9E0B459D9B1E8E /* Pods_NiceArticle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		128AAD003F3A1D8D3B4A3371 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6114C3CD9DCA66ABE508696 /* Pods_NiceArticle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5727A8BD451A33A18ADFD482 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31B5C892AA1A0EDECB0D12A9 /* Pods-NiceArticle.debug.xcconfig */,
+				AF4885BD70387C59DCDCDA67 /* Pods-NiceArticle.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F8D763271D792A2800A720FE = {
 			isa = PBXGroup;
 			children = (
 				F8D763321D792A2800A720FE /* NiceArticle */,
 				F8D763311D792A2800A720FE /* Products */,
+				5727A8BD451A33A18ADFD482 /* Pods */,
+				128AAD003F3A1D8D3B4A3371 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,9 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8D7634A1D792A2800A720FE /* Build configuration list for PBXNativeTarget "NiceArticle" */;
 			buildPhases = (
+				C98DDFDF79BFE2192AFB0E35 /* Check Pods Manifest.lock */,
 				F8D7632C1D792A2800A720FE /* Sources */,
 				F8D7632D1D792A2800A720FE /* Frameworks */,
 				F8D7632E1D792A2800A720FE /* Resources */,
+				EBE10DD35D7F8FD79E197751 /* Embed Pods Frameworks */,
+				1AD6EA6B6B02EB58A2F6FBCE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,6 +294,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AD6EA6B6B02EB58A2F6FBCE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C98DDFDF79BFE2192AFB0E35 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EBE10DD35D7F8FD79E197751 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F8D7632C1D792A2800A720FE /* Sources */ = {
@@ -394,6 +469,7 @@
 		};
 		F8D7634B1D792A2800A720FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31B5C892AA1A0EDECB0D12A9 /* Pods-NiceArticle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NiceArticle/Info.plist;
@@ -405,6 +481,7 @@
 		};
 		F8D7634C1D792A2800A720FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF4885BD70387C59DCDCDA67 /* Pods-NiceArticle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NiceArticle/Info.plist;
