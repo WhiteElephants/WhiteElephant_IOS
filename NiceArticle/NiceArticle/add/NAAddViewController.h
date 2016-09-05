@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NAAddViewController : UIViewController
+@interface NAAddViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+
+@property(strong,nonatomic)UITableView *uiTableView;
 
 @end
