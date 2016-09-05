@@ -36,8 +36,8 @@
     self.dataArray=[NSMutableArray new];
     for (NSInteger section = 0; section < 1; section++) {
         NSMutableArray *sectionArray = [NSMutableArray new];
-        for (NSInteger row = 0; row < 10; row ++) {
-            [sectionArray addObject:[NSString stringWithFormat:@"section -- %ld row -- %ld", section, row]];
+        for (NSInteger row = 0; row < 30; row ++) {
+            [sectionArray addObject:[NSString stringWithFormat:@"原:section - %ld row - %ld", section, row]];
         }
         [self.dataArray addObject:sectionArray];
     }
@@ -45,24 +45,25 @@
     self.uiTableView=[[JXMovableCellTableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.uiTableView.delegate=self;
     self.uiTableView.dataSource=self;
-    self.uiTableView.separatorColor=[UIColor blueColor];
-    self.uiTableView.separatorStyle=UITableViewCellSeparatorStyleSingleLine;
+    self.uiTableView.separatorColor=[UIColor whiteColor];
+    self.uiTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+    self.uiTableView.backgroundColor=[UIColor darkGrayColor];
     //[self.uiTableView setEditing:true animated:true];
     [self.view addSubview:self.uiTableView];
     
     self.uiTableView.gestureMinimumPressDuration = 0.5;
     self.uiTableView.drawMovalbeCellBlock = ^(UIView *movableCell){
-        movableCell.layer.shadowColor = [UIColor grayColor].CGColor;
+        movableCell.layer.shadowColor = [UIColor blackColor].CGColor;
         movableCell.layer.masksToBounds = NO;
         movableCell.layer.cornerRadius = 0;
-        movableCell.layer.shadowOffset = CGSizeMake(-5, 0);
-        movableCell.layer.shadowOpacity = 0.4;
-        movableCell.layer.shadowRadius = 5;
+        movableCell.layer.shadowOffset = CGSizeMake(10, 7);
+        movableCell.layer.shadowOpacity = 7;
+        movableCell.layer.shadowRadius = 7;
     };
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 100;
+    return 80;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -81,9 +82,6 @@
     return true;
 }
 
--(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
-}
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return self.dataArray.count;
 }
@@ -98,15 +96,40 @@
 
 - (void)tableView:(JXMovableCellTableView *)tableView newDataSourceArrayAfterMove:(NSArray *)newDataSourceArray{
     self.dataArray = newDataSourceArray.mutableCopy;
+    [self.uiTableView reloadData];
+}
+
+- (void)tableView:(JXMovableCellTableView *)tableView didMoveCellFromIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath{
+    NSLog(@"moveRowAtIndexPath:fromIndexPath:%ld,toIndexPath:%ld",fromIndexPath.row,toIndexPath.row);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *uiTableViewCell=[self.uiTableView dequeueReusableCellWithIdentifier:@"tag"];
-    if(uiTableViewCell==nil)
+    if(uiTableViewCell==nil){
         uiTableViewCell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"tag"];
-    uiTableViewCell.contentView.backgroundColor=[UIColor yellowColor];
-    uiTableViewCell.textLabel.text=[NSString stringWithFormat:@"haha%ld",(long)indexPath.row];
+        uiTableViewCell.selectedBackgroundView = [[UIView alloc] initWithFrame:uiTableViewCell.frame];
+        uiTableViewCell.selectedBackgroundView.backgroundColor=[UIColor whiteColor];
+        uiTableViewCell.textLabel.textColor=[UIColor lightGrayColor];//默认颜色
+        uiTableViewCell.textLabel.highlightedTextColor = [UIColor lightGrayColor];//选中时颜色
+        uiTableViewCell.backgroundColor=[UIColor clearColor];
+        uiTableViewCell.contentView.backgroundColor=[UIColor clearColor];
+        uiTableViewCell.backgroundView.backgroundColor=[UIColor grayColor];
+        //uiTableViewCell.selectionStyle=UITableViewCellSelectionStyleNone;
+    }
+    uiTableViewCell.textLabel.text= [NSString stringWithFormat:@"%@,现在:%ld",self.dataArray[indexPath.section][indexPath.row],indexPath.row];
     return uiTableViewCell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.uiTableView deselectRowAtIndexPath:indexPath animated:YES];//松开手指时,取消选中背景色
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.uiTableView deselectRowAtIndexPath:indexPath animated:YES];//松开手指时,取消选中背景色
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self.uiTableView deselectRowAtIndexPath:[self.uiTableView indexPathForSelectedRow] animated:YES];//UITableView点击进入下一页 push页返回取消选中状态
 }
 
 @end
