@@ -21,6 +21,7 @@
 		F8D763661D794C1600A720FE /* NACaoGaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763651D794C1600A720FE /* NACaoGaoViewController.m */; };
 		F8D7636A1D79637A00A720FE /* MToastUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763691D79637A00A720FE /* MToastUtil.m */; };
 		F8D763701D7966A000A720FE /* NAAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D7636F1D7966A000A720FE /* NAAddViewController.m */; };
+		F8F199BB1D7D65C800F34694 /* JXMovableCellTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F199B91D7D65C800F34694 /* JXMovableCellTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,8 @@
 		F8D7636C1D79648000A720FE /* MToastUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MToastUtil.h; path = library/utils/MToastUtil.h; sourceTree = "<group>"; };
 		F8D7636E1D7966A000A720FE /* NAAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAAddViewController.h; path = add/NAAddViewController.h; sourceTree = "<group>"; };
 		F8D7636F1D7966A000A720FE /* NAAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAAddViewController.m; path = add/NAAddViewController.m; sourceTree = "<group>"; };
+		F8F199B91D7D65C800F34694 /* JXMovableCellTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXMovableCellTableView.m; path = library/widget/tableview/JXMovableCellTableView.m; sourceTree = "<group>"; };
+		F8F199BA1D7D65C800F34694 /* JXMovableCellTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXMovableCellTableView.h; path = library/widget/tableview/JXMovableCellTableView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,7 @@
 		F8D763671D79630A00A720FE /* library */ = {
 			isa = PBXGroup;
 			children = (
+				F8F199B41D7D62A900F34694 /* widget */,
 				F8D763681D79631200A720FE /* utils */,
 			);
 			name = library;
@@ -179,6 +183,23 @@
 				F8D7636F1D7966A000A720FE /* NAAddViewController.m */,
 			);
 			name = add;
+			sourceTree = "<group>";
+		};
+		F8F199B41D7D62A900F34694 /* widget */ = {
+			isa = PBXGroup;
+			children = (
+				F8F199B51D7D62B500F34694 /* tableview */,
+			);
+			name = widget;
+			sourceTree = "<group>";
+		};
+		F8F199B51D7D62B500F34694 /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				F8F199B91D7D65C800F34694 /* JXMovableCellTableView.m */,
+				F8F199BA1D7D65C800F34694 /* JXMovableCellTableView.h */,
+			);
+			name = tableview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +283,7 @@
 				F8D7635B1D792F0800A720FE /* NAHomeViewController.m in Sources */,
 				F8D763381D792A2800A720FE /* AppDelegate.m in Sources */,
 				F8D763351D792A2800A720FE /* main.m in Sources */,
+				F8F199BB1D7D65C800F34694 /* JXMovableCellTableView.m in Sources */,
 				F8D763411D792A2800A720FE /* NiceArticle.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

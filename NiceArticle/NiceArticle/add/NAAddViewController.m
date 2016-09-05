@@ -9,6 +9,10 @@
 #import "NAAddViewController.h"
 #import "MToastUtil.h"
 
+@interface NAAddViewController ()
+    @property (nonatomic, strong) NSMutableArray* dataArray;
+@end
+
 @implementation NAAddViewController
 
 - (void)viewDidLoad {
@@ -29,13 +33,32 @@
 }
 
 - (void)initUITabbleView{
-    self.uiTableView=[[UITableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
+    self.dataArray=[NSMutableArray new];
+    for (NSInteger section = 0; section < 1; section++) {
+        NSMutableArray *sectionArray = [NSMutableArray new];
+        for (NSInteger row = 0; row < 10; row ++) {
+            [sectionArray addObject:[NSString stringWithFormat:@"section -- %ld row -- %ld", section, row]];
+        }
+        [self.dataArray addObject:sectionArray];
+    }
+    
+    self.uiTableView=[[JXMovableCellTableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.uiTableView.delegate=self;
     self.uiTableView.dataSource=self;
     self.uiTableView.separatorColor=[UIColor blueColor];
     self.uiTableView.separatorStyle=UITableViewCellSeparatorStyleSingleLine;
-    self.uiTableView.editing=true;
+    //[self.uiTableView setEditing:true animated:true];
     [self.view addSubview:self.uiTableView];
+    
+    self.uiTableView.gestureMinimumPressDuration = 0.5;
+    self.uiTableView.drawMovalbeCellBlock = ^(UIView *movableCell){
+        movableCell.layer.shadowColor = [UIColor grayColor].CGColor;
+        movableCell.layer.masksToBounds = NO;
+        movableCell.layer.cornerRadius = 0;
+        movableCell.layer.shadowOffset = CGSizeMake(-5, 0);
+        movableCell.layer.shadowOpacity = 0.4;
+        movableCell.layer.shadowRadius = 5;
+    };
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -47,7 +70,6 @@
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-    //删除按钮点击
     [MToastUtil showWithText:@"you click"];
 }
 
@@ -60,39 +82,31 @@
 }
 
 -(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
-    
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return self.dataArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return [self.dataArray[section] count];
 }
 
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+- (NSArray *)dataSourceArrayInTableView:(JXMovableCellTableView *)tableView{
+    return self.dataArray.copy;
+}
+
+- (void)tableView:(JXMovableCellTableView *)tableView newDataSourceArrayAfterMove:(NSArray *)newDataSourceArray{
+    self.dataArray = newDataSourceArray.mutableCopy;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *uiTableViewCell=[self.uiTableView dequeueReusableCellWithIdentifier:@"tag"];
-    if(uiTableViewCell==nil){
+    if(uiTableViewCell==nil)
         uiTableViewCell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"tag"];
-    }
     uiTableViewCell.contentView.backgroundColor=[UIColor yellowColor];
-    uiTableViewCell.textLabel.text=@"haha";
+    uiTableViewCell.textLabel.text=[NSString stringWithFormat:@"haha%ld",(long)indexPath.row];
     return uiTableViewCell;
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end
