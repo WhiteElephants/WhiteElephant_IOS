@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JXMovableCellTableView.h"
 
-@interface NAAddViewController : UIViewController<JXMovableCellTableViewDataSource,JXMovableCellTableViewDelegate>
+@interface NAAddViewController : UIViewController<JXMovableCellTableViewDataSource,JXMovableCellTableViewDelegate,UITextFieldDelegate>
 
 @property(strong,nonatomic)JXMovableCellTableView *uiTableView;
 

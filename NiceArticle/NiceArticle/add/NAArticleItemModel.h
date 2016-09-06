@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 
 typedef enum {
+    HEADER,
+    FOOTER,
     TEXT,//文本类型
     IMAGE,//单个图片类型
     MULTI_IMAGE//多个图片类型
@@ -24,7 +26,7 @@ typedef enum {
 
 -(instancetype)initWithIdAndType:(NSInteger)id setType:(NAArticalItemType)type;
 
-
++(UITableViewCell*) createTableViewHeader:(UITableView*)tableView  itemModel:(NAArticleItemModel*)itemModel  setDelegate:(id<UITextFieldDelegate> )delegate;
 +(UITableViewCell*) createTableViewCellText:(UITableView*)tableView itemModel:(NAArticleItemModel*)itemModel;
 +(UITableViewCell*) createTableViewCellImage:(UITableView*)tableView itemModel:(NAArticleItemModel*)itemModel;
 +(UITableViewCell*) createTableViewCellMultiImage:(UITableView*)tableView itemModel:(NAArticleItemModel*)itemModel;

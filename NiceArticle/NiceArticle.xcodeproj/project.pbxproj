@@ -24,6 +24,7 @@
 		F8D763701D7966A000A720FE /* NAAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D7636F1D7966A000A720FE /* NAAddViewController.m */; };
 		F8F199BB1D7D65C800F34694 /* JXMovableCellTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F199B91D7D65C800F34694 /* JXMovableCellTableView.m */; };
 		F8F199BE1D7E6F0B00F34694 /* NAArticleItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F199BD1D7E6F0B00F34694 /* NAArticleItemModel.m */; };
+		F8F199C41D7EB44A00F34694 /* MDeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F199C31D7EB44A00F34694 /* MDeviceUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		F8F199BA1D7D65C800F34694 /* JXMovableCellTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXMovableCellTableView.h; path = library/widget/tableview/JXMovableCellTableView.h; sourceTree = "<group>"; };
 		F8F199BC1D7E6F0B00F34694 /* NAArticleItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAArticleItemModel.h; path = add/NAArticleItemModel.h; sourceTree = "<group>"; };
 		F8F199BD1D7E6F0B00F34694 /* NAArticleItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAArticleItemModel.m; path = add/NAArticleItemModel.m; sourceTree = "<group>"; };
+		F8F199C21D7EB44A00F34694 /* MDeviceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDeviceUtil.h; path = library/utils/MDeviceUtil.h; sourceTree = "<group>"; };
+		F8F199C31D7EB44A00F34694 /* MDeviceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDeviceUtil.m; path = library/utils/MDeviceUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +202,8 @@
 			children = (
 				F8D7636C1D79648000A720FE /* MToastUtil.h */,
 				F8D763691D79637A00A720FE /* MToastUtil.m */,
+				F8F199C21D7EB44A00F34694 /* MDeviceUtil.h */,
+				F8F199C31D7EB44A00F34694 /* MDeviceUtil.m */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 				F8D763561D792CD200A720FE /* NAMineViewController.m in Sources */,
 				F8D7635E1D79319600A720FE /* NAMainViewController.m in Sources */,
 				F8D7636A1D79637A00A720FE /* MToastUtil.m in Sources */,
+				F8F199C41D7EB44A00F34694 /* MDeviceUtil.m in Sources */,
 				F8D7635B1D792F0800A720FE /* NAHomeViewController.m in Sources */,
 				F8D763381D792A2800A720FE /* AppDelegate.m in Sources */,
 				F8D763351D792A2800A720FE /* main.m in Sources */,

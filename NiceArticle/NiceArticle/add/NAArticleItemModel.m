@@ -7,7 +7,10 @@
 //
 
 #import "NAArticleItemModel.h"
+#import "MDeviceUtil.h"
 
+@interface NAArticleItemModel()
+@end
 @implementation NAArticleItemModel
 
 -(instancetype)init{
@@ -28,6 +31,48 @@
         [self setItemType:type];
     }
     return self;
+}
+
++(UITableViewCell*) createTableViewHeader:(UITableView*)tableView  itemModel:(NAArticleItemModel*)itemModel setDelegate:(id<UITextFieldDelegate> )delegate{
+    UITextField *textField=nil;
+    CGRect frame=CGRectMake(0, 0, [MDeviceUtil getScreenRect].size.width, 60);
+
+    UITableViewCell *uiTableViewCell=[tableView dequeueReusableCellWithIdentifier:@"createTableViewHeader"];
+    if(uiTableViewCell==nil){
+        uiTableViewCell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"createTableViewHeader"];
+        uiTableViewCell.selectedBackgroundView = [[UIView alloc] initWithFrame:uiTableViewCell.frame];
+        uiTableViewCell.selectedBackgroundView.backgroundColor=[UIColor whiteColor];
+        uiTableViewCell.textLabel.textColor=[UIColor lightGrayColor];//默认颜色
+        uiTableViewCell.textLabel.highlightedTextColor = [UIColor lightGrayColor];//选中时颜色
+        uiTableViewCell.backgroundColor=[UIColor clearColor];
+        uiTableViewCell.contentView.backgroundColor=[UIColor blackColor];
+        
+        uiTableViewCell.backgroundView = [[UIView alloc] initWithFrame:uiTableViewCell.frame];
+        uiTableViewCell.backgroundView.backgroundColor=[UIColor whiteColor];
+        //uiTableViewCell.selectionStyle=UITableViewCellSelectionStyleNone;
+        
+        textField=[[UITextField alloc]initWithFrame:frame];
+        [textField setTextColor:[UIColor blackColor]];
+        textField.borderStyle = UITextBorderStyleRoundedRect;//边框风格
+        textField.autocorrectionType = UITextAutocorrectionTypeYes;//设置是否启动自动提醒更正功能
+        textField.placeholder = @"点击输入标题";//默认的文本显示
+        textField.returnKeyType = UIReturnKeyDone;//设置键盘完成的按钮
+        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        textField.delegate = delegate;
+        [textField setBackgroundColor:[UIColor whiteColor]];
+        [textField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
+        [uiTableViewCell.contentView addSubview:textField];
+    }
+    
+    if(!textField)
+        textField=[uiTableViewCell.contentView viewWithTag:1];
+    
+    textField.text= [NSString stringWithFormat:@"%ld,type:%u",itemModel.id,itemModel.itemType];
+    //[textField sizeToFit];
+    //uiTableViewCell.frame = frame;
+    uiTableViewCell.frame=frame;//设置这个值就不会占用其它cell的位置了
+    [tableView setTableHeaderView:uiTableViewCell];
+    return uiTableViewCell;
 }
 
 +(UITableViewCell*) createTableViewCellText:(UITableView*)tableView  itemModel:(NAArticleItemModel*)itemModel{
