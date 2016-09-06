@@ -38,7 +38,7 @@
     for (NSInteger section = 0; section < 1; section++) {
         NSMutableArray *sectionArray = [NSMutableArray new];
         for (NSInteger row = 0; row < 30; row ++) {
-            NAArticleItemModel *itemModel=[[NAArticleItemModel alloc] initWithIdAndType:row setType:TEXT];
+            NAArticleItemModel *itemModel=[[NAArticleItemModel alloc] initWithIdAndType:row setType:(row%3==0?TEXT:(row%3==1?IMAGE:MULTI_IMAGE))];
             [sectionArray addObject:itemModel];
         }
         [self.dataArray addObject:sectionArray];
@@ -117,19 +117,20 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *uiTableViewCell=[self.uiTableView dequeueReusableCellWithIdentifier:@"tag"];
-    if(uiTableViewCell==nil){
-        uiTableViewCell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"tag"];
-        uiTableViewCell.selectedBackgroundView = [[UIView alloc] initWithFrame:uiTableViewCell.frame];
-        uiTableViewCell.selectedBackgroundView.backgroundColor=[UIColor whiteColor];
-        uiTableViewCell.textLabel.textColor=[UIColor lightGrayColor];//默认颜色
-        uiTableViewCell.textLabel.highlightedTextColor = [UIColor lightGrayColor];//选中时颜色
-        uiTableViewCell.backgroundColor=[UIColor clearColor];
-        uiTableViewCell.contentView.backgroundColor=[UIColor clearColor];
-        uiTableViewCell.backgroundView.backgroundColor=[UIColor grayColor];
-        //uiTableViewCell.selectionStyle=UITableViewCellSelectionStyleNone;
+    NAArticleItemModel*itemModel=[self.dataArray[indexPath.section] objectAtIndex:indexPath.row];
+    UITableViewCell *uiTableViewCell=nil;
+    switch (itemModel.itemType) {
+        default:
+        case TEXT:
+            uiTableViewCell=[NAArticleItemModel createTableViewCellText:tableView itemModel:itemModel];
+            break;
+        case IMAGE:
+            uiTableViewCell=[NAArticleItemModel createTableViewCellImage:tableView itemModel:itemModel];
+            break;
+        case MULTI_IMAGE:
+            uiTableViewCell=[NAArticleItemModel createTableViewCellMultiImage:tableView itemModel:itemModel];
+            break;
     }
-    uiTableViewCell.textLabel.text= [NSString stringWithFormat:@"%@,现在:%ld",self.dataArray[indexPath.section][indexPath.row],indexPath.row];
     return uiTableViewCell;
 }
 

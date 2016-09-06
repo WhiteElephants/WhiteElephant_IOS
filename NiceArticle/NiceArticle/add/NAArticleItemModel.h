@@ -7,19 +7,26 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-enum NAArticalItemType{
+typedef enum {
     TEXT,//文本类型
-    IMAGE//图片类型
-};
+    IMAGE,//单个图片类型
+    MULTI_IMAGE//多个图片类型
+} NAArticalItemType;
 
 @interface NAArticleItemModel : NSObject
 
 @property NSInteger id;
 @property NSString *content;
 @property NSString *imagePath;
-@property NAArticalItemType *itemType;
+@property NAArticalItemType itemType;
 
--(instancetype)initWithIdAndType:(NSInteger)id setType:(NAArticalItemType*)type;
+-(instancetype)initWithIdAndType:(NSInteger)id setType:(NAArticalItemType)type;
+
+
++(UITableViewCell*) createTableViewCellText:(UITableView*)tableView itemModel:(NAArticleItemModel*)itemModel;
++(UITableViewCell*) createTableViewCellImage:(UITableView*)tableView itemModel:(NAArticleItemModel*)itemModel;
++(UITableViewCell*) createTableViewCellMultiImage:(UITableView*)tableView itemModel:(NAArticleItemModel*)itemModel;
 
 @end
