@@ -49,7 +49,18 @@
     self.uiTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     self.uiTableView.backgroundColor=[UIColor darkGrayColor];
     //[self.uiTableView setEditing:true animated:true];
-    [self.view addSubview:self.uiTableView];
+    [self.view addSubview:self.uiTableView];//处理 UITableView 覆盖状态栏问题
+    if (self.uiTableView.style == UITableViewStylePlain) {
+        CGRect statusBarRect=[[UIApplication sharedApplication] statusBarFrame];
+        
+        UIEdgeInsets contentInset = self.uiTableView.contentInset;
+        contentInset.top = statusBarRect.size.height;
+        [self.uiTableView setContentInset:contentInset];
+        
+        UIView *barBackground = [[UIView alloc] initWithFrame:statusBarRect];//使得文字在状态栏下半透明显示
+        barBackground.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
+        [self.view addSubview:barBackground];
+    }
     
     self.uiTableView.gestureMinimumPressDuration = 0.5;
     self.uiTableView.drawMovalbeCellBlock = ^(UIView *movableCell){
