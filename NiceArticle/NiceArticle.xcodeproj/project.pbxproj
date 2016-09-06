@@ -23,6 +23,7 @@
 		F8D7636A1D79637A00A720FE /* MToastUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763691D79637A00A720FE /* MToastUtil.m */; };
 		F8D763701D7966A000A720FE /* NAAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D7636F1D7966A000A720FE /* NAAddViewController.m */; };
 		F8F199BB1D7D65C800F34694 /* JXMovableCellTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F199B91D7D65C800F34694 /* JXMovableCellTableView.m */; };
+		F8F199BE1D7E6F0B00F34694 /* NAArticleItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F199BD1D7E6F0B00F34694 /* NAArticleItemModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		F8D7636F1D7966A000A720FE /* NAAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAAddViewController.m; path = add/NAAddViewController.m; sourceTree = "<group>"; };
 		F8F199B91D7D65C800F34694 /* JXMovableCellTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXMovableCellTableView.m; path = library/widget/tableview/JXMovableCellTableView.m; sourceTree = "<group>"; };
 		F8F199BA1D7D65C800F34694 /* JXMovableCellTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXMovableCellTableView.h; path = library/widget/tableview/JXMovableCellTableView.h; sourceTree = "<group>"; };
+		F8F199BC1D7E6F0B00F34694 /* NAArticleItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAArticleItemModel.h; path = add/NAArticleItemModel.h; sourceTree = "<group>"; };
+		F8F199BD1D7E6F0B00F34694 /* NAArticleItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAArticleItemModel.m; path = add/NAArticleItemModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +208,8 @@
 			children = (
 				F8D7636E1D7966A000A720FE /* NAAddViewController.h */,
 				F8D7636F1D7966A000A720FE /* NAAddViewController.m */,
+				F8F199BC1D7E6F0B00F34694 /* NAArticleItemModel.h */,
+				F8F199BD1D7E6F0B00F34694 /* NAArticleItemModel.m */,
 			);
 			name = add;
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 			files = (
 				F8D763661D794C1600A720FE /* NACaoGaoViewController.m in Sources */,
 				F8D763621D794B7F00A720FE /* NAFindViewController.m in Sources */,
+				F8F199BE1D7E6F0B00F34694 /* NAArticleItemModel.m in Sources */,
 				F8D7633B1D792A2800A720FE /* ViewController.m in Sources */,
 				F8D763701D7966A000A720FE /* NAAddViewController.m in Sources */,
 				F8D763561D792CD200A720FE /* NAMineViewController.m in Sources */,

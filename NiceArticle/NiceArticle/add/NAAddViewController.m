@@ -8,6 +8,7 @@
 
 #import "NAAddViewController.h"
 #import "MToastUtil.h"
+#import "NAArticleItemModel.h"
 
 @interface NAAddViewController ()
     @property (nonatomic, strong) NSMutableArray* dataArray;
@@ -37,7 +38,8 @@
     for (NSInteger section = 0; section < 1; section++) {
         NSMutableArray *sectionArray = [NSMutableArray new];
         for (NSInteger row = 0; row < 30; row ++) {
-            [sectionArray addObject:[NSString stringWithFormat:@"原:section - %ld row - %ld", section, row]];
+            NAArticleItemModel *itemModel=[[NAArticleItemModel alloc] initWithIdAndType:row setType:TEXT];
+            [sectionArray addObject:itemModel];
         }
         [self.dataArray addObject:sectionArray];
     }
