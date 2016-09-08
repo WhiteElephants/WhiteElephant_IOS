@@ -67,7 +67,6 @@
     [headerModel setId:-1];
     [headerModel setItemType:HEADER];
     self.uiTableView.tableHeaderView=[NAArticleItemModel createTableViewHeader:self.uiTableView itemModel:headerModel setDelegate:self];
-    
     self.uiTableView.gestureMinimumPressDuration = 0.5;
     self.uiTableView.drawMovalbeCellBlock = ^(UIView *movableCell){
         movableCell.layer.shadowColor = [UIColor blackColor].CGColor;

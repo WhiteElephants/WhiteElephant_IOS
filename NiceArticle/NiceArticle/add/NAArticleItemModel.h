@@ -26,7 +26,7 @@ typedef enum {
 
 -(instancetype)initWithIdAndType:(NSInteger)id setType:(NAArticalItemType)type;
 
-+(UITableViewCell*) createTableViewHeader:(UITableView*)tableView  itemModel:(NAArticleItemModel*)itemModel  setDelegate:(id<UITextFieldDelegate> )delegate;
++(UIView*) createTableViewHeader:(UITableView*)tableView  itemModel:(NAArticleItemModel*)itemModel  setDelegate:(id<UITextFieldDelegate> )delegate;
 +(UITableViewCell*) createTableViewCellText:(UITableView*)tableView itemModel:(NAArticleItemModel*)itemModel;
 +(UITableViewCell*) createTableViewCellImage:(UITableView*)tableView itemModel:(NAArticleItemModel*)itemModel;
 +(UITableViewCell*) createTableViewCellMultiImage:(UITableView*)tableView itemModel:(NAArticleItemModel*)itemModel;

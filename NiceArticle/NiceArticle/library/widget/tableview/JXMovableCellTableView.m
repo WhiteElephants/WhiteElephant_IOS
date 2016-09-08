@@ -195,7 +195,15 @@ static NSTimeInterval kJXMovableCellAnimationTime = 0.25;
         //只有一组
         [_tempDataSource[fromIndexPath.section] exchangeObjectAtIndex:fromIndexPath.row withObjectAtIndex:toIndexPath.row];
         //交换cell
+        if(self.tableHeaderView==nil)
+            NSLog(@"headerview is nil");
+        else
+            NSLog(@"headerview is not nil");
         [self moveRowAtIndexPath:fromIndexPath toIndexPath:toIndexPath];
+        if(self.tableHeaderView==nil)
+            NSLog(@"headerview is nil");
+        else
+            NSLog(@"headerview is not nil");
     }else {
         //有多组
         id fromData = _tempDataSource[fromIndexPath.section][fromIndexPath.row];

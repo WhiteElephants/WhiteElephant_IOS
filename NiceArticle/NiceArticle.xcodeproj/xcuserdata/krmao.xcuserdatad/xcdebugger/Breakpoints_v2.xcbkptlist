@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NiceArticle/library/widget/tableview/JXMovableCellTableView.m"
-            timestampString = "494758378.11172"
+            timestampString = "495024837.043044"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
             landmarkName = "-jx_updateDataSourceAndCellFromIndexPath:toIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NiceArticle/library/widget/tableview/JXMovableCellTableView.m"
-            timestampString = "494758382.400277"
+            timestampString = "495024837.043044"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "-jx_updateDataSourceAndCellFromIndexPath:toIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -64,22 +64,6 @@
             startingLineNumber = "44"
             endingLineNumber = "44"
             landmarkName = "-initUITabbleView"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NiceArticle/library/widget/tableview/JXMovableCellTableView.m"
-            timestampString = "494758530.3481"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
-            landmarkName = "-jx_gestureChanged:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
