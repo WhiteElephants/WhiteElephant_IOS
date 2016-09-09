@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NiceArticle/add/NAAddViewController.m"
-            timestampString = "494841097.571961"
+            timestampString = "495111863.377469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "-initUITabbleView"
             landmarkType = "5">
          </BreakpointContent>

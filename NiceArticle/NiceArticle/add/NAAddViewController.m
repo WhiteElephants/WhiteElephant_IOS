@@ -10,6 +10,8 @@
 #import "MToastUtil.h"
 #import "NAArticleItemModel.h"
 
+#define UIColorFromHex(s) [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s & 0xFF00) >>8))/255.0 blue:((s & 0xFF))/255.0 alpha:1.0]
+
 @interface NAAddViewController ()
     @property (nonatomic, strong) NSMutableArray* dataArray;
 @end
@@ -47,9 +49,9 @@
     self.uiTableView=[[JXMovableCellTableView alloc]initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.uiTableView.delegate=self;
     self.uiTableView.dataSource=self;
-    self.uiTableView.separatorColor=[UIColor whiteColor];
+    self.uiTableView.separatorColor=[UIColor lightGrayColor];
     self.uiTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
-    self.uiTableView.backgroundColor=[UIColor darkGrayColor];
+    self.uiTableView.backgroundColor=UIColorFromHex(0xefefef);
     //[self.uiTableView setEditing:true animated:true];
     [self.view addSubview:self.uiTableView];//处理 UITableView 覆盖状态栏问题
     if (self.uiTableView.style == UITableViewStylePlain) {

@@ -34,8 +34,10 @@
 }
 
 +(UIView*) createTableViewHeader:(UITableView*)tableView  itemModel:(NAArticleItemModel*)itemModel setDelegate:(id<UITextFieldDelegate> )delegate{
+    UIView *contentHeaderView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, [MDeviceUtil getScreenRect].size.width, 100)];
+    
     UITextField *textField=nil;
-    CGRect frame=CGRectMake(0, 0, [MDeviceUtil getScreenRect].size.width, 60);
+    CGRect frame=CGRectMake(10, 10, [MDeviceUtil getScreenRect].size.width-20, 80);
     textField=[[UITextField alloc]initWithFrame:frame];
     [textField setTextColor:[UIColor blackColor]];
     textField.borderStyle = UITextBorderStyleRoundedRect;//边框风格
@@ -45,10 +47,12 @@
     textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     textField.delegate = delegate;
     [textField setBackgroundColor:[UIColor whiteColor]];
+    [textField setFont:[UIFont fontWithName:@"Arial" size:12]];
     [textField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
-    textField.text= [NSString stringWithFormat:@"%ld,type:%u",itemModel.id,itemModel.itemType];
-    [tableView setTableHeaderView:textField];
-    return textField;
+    textField.textAlignment=NSTextAlignmentLeft;
+    [contentHeaderView setBackgroundColor:[UIColor clearColor]];
+    [contentHeaderView addSubview:textField];
+    return contentHeaderView;
 }
 
 +(UITableViewCell*) createTableViewCellText:(UITableView*)tableView  itemModel:(NAArticleItemModel*)itemModel{
