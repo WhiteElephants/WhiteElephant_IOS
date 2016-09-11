@@ -1,0 +1,28 @@
+//
+//  Coding-Prefix.pch
+//  Coding
+//
+//  Created by Jason on 11/9/15.
+//  Copyright © 2015 Jason. All rights reserved.
+//
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+
+
+#ifndef NiceArtcle_Prefix_pch
+#define NiceArtcle_Prefix_pch
+
+//先来一个测试的地址
+#define kBaseUrlStr_Test @"https://xxxx.net/"
+
+//常用变量
+#define DebugLog(s, ...) NSLog(@"%s(%d): %@", __FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])
+
+#define kScreen_Bounds [UIScreen mainScreen].bounds
+#define kScreen_Height [UIScreen mainScreen].bounds.size.height
+#define kScreen_Width [UIScreen mainScreen].bounds.size.width
+#define kPaddingLeftWidth 15.0
+
+
+#endif /* Coding_Prefix_pch */
