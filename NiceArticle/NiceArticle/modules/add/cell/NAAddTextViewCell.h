@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NAAddHeaderViewCell : UITableViewCell
+@interface NAAddTextViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @end

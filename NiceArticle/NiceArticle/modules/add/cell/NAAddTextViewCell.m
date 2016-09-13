@@ -6,9 +6,9 @@
 //  Copyright © 2016年 WhiteElephant. All rights reserved.
 //
 
-#import "NAAddHeaderViewCell.h"
+#import "NAAddTextViewCell.h"
 
-@implementation NAAddHeaderViewCell
+@implementation NAAddTextViewCell
 
 - (void)awakeFromNib {
     // Initialization code

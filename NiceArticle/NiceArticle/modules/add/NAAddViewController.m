@@ -9,7 +9,7 @@
 #import "NAAddViewController.h"
 #import "MToastUtil.h"
 #import "NAArticleItemModel.h"
-#import "NAAddHeaderViewCell.h"
+#import "NAAddTextViewCell.h"
 
 #define UIColorFromHex(s) [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s & 0xFF00) >>8))/255.0 blue:((s & 0xFF))/255.0 alpha:1.0]
 
@@ -93,8 +93,8 @@ static NSString* reuseId=@"reuse";
     self.uiTableView.estimatedRowHeight = 100.0; // 设置为一个接近于行高“平均值”的数值
     
     //self.uiTableView.tableHeaderView=[NAArticleItemModel createTableViewHeader:self.uiTableView itemModel:headerModel setDelegate:self];
-    self.uiTableView.tableHeaderView=[[NAAddHeaderViewCell alloc]init];
-    [self.uiTableView registerNib:[UINib nibWithNibName:@"NAAddHeaderViewCell" bundle:nil ] forCellReuseIdentifier:reuseId];
+    self.uiTableView.tableHeaderView=[[NAAddTextViewCell alloc]init];
+    [self.uiTableView registerNib:[UINib nibWithNibName:@"NAAddTextViewCell" bundle:nil ] forCellReuseIdentifier:reuseId];
     
     self.prototypeCell  = [self.uiTableView dequeueReusableCellWithIdentifier:reuseId];
 }
@@ -123,7 +123,7 @@ static NSString* reuseId=@"reuse";
     switch (itemModel.itemType) {
         default:
         case TEXT:{
-            NAAddHeaderViewCell *headerViewCell=[self.uiTableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
+            NAAddTextViewCell *headerViewCell=[self.uiTableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
             [headerViewCell.textView setDelegate:self];
             [headerViewCell.textView setTag:indexPath.row];
             [headerViewCell.textView setText:itemModel.content];
@@ -146,7 +146,7 @@ static NSString* reuseId=@"reuse";
     switch (itemModel.itemType) {
         case TEXT:{
             if(itemModel.isTextChangedAfterCalHeight){
-                NAAddHeaderViewCell *cell = (NAAddHeaderViewCell *)self.prototypeCell;
+                NAAddTextViewCell *cell = (NAAddTextViewCell *)self.prototypeCell;
                 cell.textView.text = itemModel.content;
                 CGSize newTextViewSize = [cell.textView sizeThatFits:CGSizeMake(cell.textView.frame.size.width, FLT_MAX)];
                 CGFloat currentContentViewHeight = cell.contentView.frame.size.height;

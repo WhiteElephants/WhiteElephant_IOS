@@ -21,8 +21,8 @@
 		F8DE92621D87CE7B004DADDD /* NAFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE925B1D87CE7B004DADDD /* NAFindViewController.m */; };
 		F8DE92631D87CE7B004DADDD /* NAAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE925E1D87CE7B004DADDD /* NAAddViewController.m */; };
 		F8DE92641D87CE7B004DADDD /* NAArticleItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE92601D87CE7B004DADDD /* NAArticleItemModel.m */; };
-		F8DE92781D87D929004DADDD /* NAAddHeaderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE92761D87D929004DADDD /* NAAddHeaderViewCell.m */; };
-		F8DE92791D87D929004DADDD /* NAAddHeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8DE92771D87D929004DADDD /* NAAddHeaderViewCell.xib */; };
+		F8DE92781D87D929004DADDD /* NAAddTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE92761D87D929004DADDD /* NAAddTextViewCell.m */; };
+		F8DE92791D87D929004DADDD /* NAAddTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8DE92771D87D929004DADDD /* NAAddTextViewCell.xib */; };
 		F8F199BB1D7D65C800F34694 /* JXMovableCellTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F199B91D7D65C800F34694 /* JXMovableCellTableView.m */; };
 		F8F199C41D7EB44A00F34694 /* MDeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F199C31D7EB44A00F34694 /* MDeviceUtil.m */; };
 /* End PBXBuildFile section */
@@ -55,9 +55,9 @@
 		F8DE925E1D87CE7B004DADDD /* NAAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAAddViewController.m; sourceTree = "<group>"; };
 		F8DE925F1D87CE7B004DADDD /* NAArticleItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAArticleItemModel.h; sourceTree = "<group>"; };
 		F8DE92601D87CE7B004DADDD /* NAArticleItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAArticleItemModel.m; sourceTree = "<group>"; };
-		F8DE92751D87D929004DADDD /* NAAddHeaderViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAAddHeaderViewCell.h; path = cell/NAAddHeaderViewCell.h; sourceTree = "<group>"; };
-		F8DE92761D87D929004DADDD /* NAAddHeaderViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAAddHeaderViewCell.m; path = cell/NAAddHeaderViewCell.m; sourceTree = "<group>"; };
-		F8DE92771D87D929004DADDD /* NAAddHeaderViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NAAddHeaderViewCell.xib; path = cell/NAAddHeaderViewCell.xib; sourceTree = "<group>"; };
+		F8DE92751D87D929004DADDD /* NAAddTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAAddTextViewCell.h; path = cell/NAAddTextViewCell.h; sourceTree = "<group>"; };
+		F8DE92761D87D929004DADDD /* NAAddTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAAddTextViewCell.m; path = cell/NAAddTextViewCell.m; sourceTree = "<group>"; };
+		F8DE92771D87D929004DADDD /* NAAddTextViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NAAddTextViewCell.xib; path = cell/NAAddTextViewCell.xib; sourceTree = "<group>"; };
 		F8F199B91D7D65C800F34694 /* JXMovableCellTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXMovableCellTableView.m; path = library/widget/tableview/JXMovableCellTableView.m; sourceTree = "<group>"; };
 		F8F199BA1D7D65C800F34694 /* JXMovableCellTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXMovableCellTableView.h; path = library/widget/tableview/JXMovableCellTableView.h; sourceTree = "<group>"; };
 		F8F199C21D7EB44A00F34694 /* MDeviceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDeviceUtil.h; path = library/utils/MDeviceUtil.h; sourceTree = "<group>"; };
@@ -224,9 +224,9 @@
 		F8DE92741D87D8A2004DADDD /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				F8DE92751D87D929004DADDD /* NAAddHeaderViewCell.h */,
-				F8DE92761D87D929004DADDD /* NAAddHeaderViewCell.m */,
-				F8DE92771D87D929004DADDD /* NAAddHeaderViewCell.xib */,
+				F8DE92751D87D929004DADDD /* NAAddTextViewCell.h */,
+				F8DE92761D87D929004DADDD /* NAAddTextViewCell.m */,
+				F8DE92771D87D929004DADDD /* NAAddTextViewCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -311,7 +311,7 @@
 			files = (
 				F8D763461D792A2800A720FE /* LaunchScreen.storyboard in Resources */,
 				F8D763431D792A2800A720FE /* Assets.xcassets in Resources */,
-				F8DE92791D87D929004DADDD /* NAAddHeaderViewCell.xib in Resources */,
+				F8DE92791D87D929004DADDD /* NAAddTextViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +378,7 @@
 				F8D7635B1D792F0800A720FE /* NAHomeViewController.m in Sources */,
 				F8DE92621D87CE7B004DADDD /* NAFindViewController.m in Sources */,
 				F8D763381D792A2800A720FE /* AppDelegate.m in Sources */,
-				F8DE92781D87D929004DADDD /* NAAddHeaderViewCell.m in Sources */,
+				F8DE92781D87D929004DADDD /* NAAddTextViewCell.m in Sources */,
 				F8DE92551D87CE4A004DADDD /* NACaoGaoViewController.m in Sources */,
 				F8D763351D792A2800A720FE /* main.m in Sources */,
 				F8F199BB1D7D65C800F34694 /* JXMovableCellTableView.m in Sources */,
