@@ -9,11 +9,13 @@
 #import "NAAddViewController.h"
 #import "MToastUtil.h"
 #import "NAArticleItemModel.h"
+#import "NAAddHeaderViewCell.h"
 
 #define UIColorFromHex(s) [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s & 0xFF00) >>8))/255.0 blue:((s & 0xFF))/255.0 alpha:1.0]
 
 @interface NAAddViewController ()
     @property (nonatomic, strong) NSMutableArray* dataArray;
+    @property (nonatomic, strong) UITableViewCell *prototypeCell;
 @end
 
 @implementation NAAddViewController
@@ -34,6 +36,8 @@
     
     [self initUITabbleView];
 }
+
+static NSString* reuseId=@"reuse";
 
 - (void)initUITabbleView{
     self.dataArray=[NSMutableArray new];
@@ -68,7 +72,7 @@
     NAArticleItemModel * headerModel=[[NAArticleItemModel alloc]init];
     [headerModel setId:-1];
     [headerModel setItemType:HEADER];
-    self.uiTableView.tableHeaderView=[NAArticleItemModel createTableViewHeader:self.uiTableView itemModel:headerModel setDelegate:self];
+    
     self.uiTableView.gestureMinimumPressDuration = 0.5;
     self.uiTableView.drawMovalbeCellBlock = ^(UIView *movableCell){
         movableCell.layer.shadowColor = [UIColor blackColor].CGColor;
@@ -78,6 +82,14 @@
         movableCell.layer.shadowOpacity = 7;
         movableCell.layer.shadowRadius = 7;
     };
+    self.uiTableView.rowHeight = UITableViewAutomaticDimension;
+    self.uiTableView.estimatedRowHeight = 100.0; // 设置为一个接近于行高“平均值”的数值
+    
+    //self.uiTableView.tableHeaderView=[NAArticleItemModel createTableViewHeader:self.uiTableView itemModel:headerModel setDelegate:self];
+    self.uiTableView.tableHeaderView=[[NAAddHeaderViewCell alloc]init];
+    [self.uiTableView registerNib:[UINib nibWithNibName:@"NAAddHeaderViewCell" bundle:nil ] forCellReuseIdentifier:reuseId];
+    
+    self.prototypeCell  = [self.uiTableView dequeueReusableCellWithIdentifier:reuseId];
 }
 - (void)textViewDidBeginEditing:(UITextView *)textView{
     [MToastUtil showWithText:@"beigin"];
@@ -86,9 +98,38 @@
 - (void)textViewDidEndEditing:(UITextView *)textView{
      [MToastUtil showWithText:@"end"];
 }
+#pragma mark - UITextViewDelegate
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    if ([text isEqualToString:@"\n"]) {
+        NSLog(@"h=%f", textView.contentSize.height);
+    }
+    return YES;
+}
+
+- (void)textViewDidChange:(UITextView *)textView {
+    NAArticleItemModel*itemModel=[self.dataArray[0] objectAtIndex:textView.tag];
+    itemModel.content=textView.text;
+    [self.uiTableView beginUpdates];
+    [self.uiTableView endUpdates];
+}
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
+    CGFloat heightForRow=50;
+    NAArticleItemModel*itemModel=[self.dataArray[indexPath.section] objectAtIndex:indexPath.row];
+    switch (itemModel.itemType) {
+        case TEXT:{
+            NAAddHeaderViewCell *cell = (NAAddHeaderViewCell *)self.prototypeCell;
+            cell.textView.text = itemModel.content;
+            CGSize s =  [cell.textView sizeThatFits:CGSizeMake(cell.textView.frame.size.width, FLT_MAX)];
+            CGFloat defaultHeight = cell.contentView.frame.size.height;
+            CGFloat height = s.height > defaultHeight ? s.height : defaultHeight;
+            heightForRow= 1  + height;
+            break;
+        }
+        default:
+            break;
+    }
+    return heightForRow;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -131,11 +172,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NAArticleItemModel*itemModel=[self.dataArray[indexPath.section] objectAtIndex:indexPath.row];
     UITableViewCell *uiTableViewCell=nil;
+  
     switch (itemModel.itemType) {
         default:
-        case TEXT:
-            uiTableViewCell=[NAArticleItemModel createTableViewCellText:tableView itemModel:itemModel];
+        case TEXT:{
+            NAAddHeaderViewCell *headerViewCell=[self.uiTableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
+            [headerViewCell.textView setDelegate:self];
+            [headerViewCell.textView setTag:indexPath.row];
+            uiTableViewCell=headerViewCell;
             break;
+        }
         case IMAGE:
             uiTableViewCell=[NAArticleItemModel createTableViewCellImage:tableView itemModel:itemModel];
             break;

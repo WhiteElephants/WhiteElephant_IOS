@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		62BB07076A9E0B459D9B1E8E /* Pods_NiceArticle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6114C3CD9DCA66ABE508696 /* Pods_NiceArticle.framework */; };
+		2EFE2BF112DE0FF347FA4BCA /* Pods_NiceArticle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED81BC293334BE6D05C54447 /* Pods_NiceArticle.framework */; };
 		F8D763351D792A2800A720FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763341D792A2800A720FE /* main.m */; };
 		F8D763381D792A2800A720FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763371D792A2800A720FE /* AppDelegate.m */; };
 		F8D763411D792A2800A720FE /* NiceArticle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8D7633F1D792A2800A720FE /* NiceArticle.xcdatamodeld */; };
@@ -21,14 +21,16 @@
 		F8DE92621D87CE7B004DADDD /* NAFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE925B1D87CE7B004DADDD /* NAFindViewController.m */; };
 		F8DE92631D87CE7B004DADDD /* NAAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE925E1D87CE7B004DADDD /* NAAddViewController.m */; };
 		F8DE92641D87CE7B004DADDD /* NAArticleItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE92601D87CE7B004DADDD /* NAArticleItemModel.m */; };
+		F8DE92781D87D929004DADDD /* NAAddHeaderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE92761D87D929004DADDD /* NAAddHeaderViewCell.m */; };
+		F8DE92791D87D929004DADDD /* NAAddHeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8DE92771D87D929004DADDD /* NAAddHeaderViewCell.xib */; };
 		F8F199BB1D7D65C800F34694 /* JXMovableCellTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F199B91D7D65C800F34694 /* JXMovableCellTableView.m */; };
 		F8F199C41D7EB44A00F34694 /* MDeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F199C31D7EB44A00F34694 /* MDeviceUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		31B5C892AA1A0EDECB0D12A9 /* Pods-NiceArticle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceArticle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle.debug.xcconfig"; sourceTree = "<group>"; };
-		AF4885BD70387C59DCDCDA67 /* Pods-NiceArticle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceArticle.release.xcconfig"; path = "Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle.release.xcconfig"; sourceTree = "<group>"; };
-		B6114C3CD9DCA66ABE508696 /* Pods_NiceArticle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiceArticle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17B208CA4BFCABED8528D263 /* Pods-NiceArticle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceArticle.release.xcconfig"; path = "Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle.release.xcconfig"; sourceTree = "<group>"; };
+		57929C07F38C432682F1D9B2 /* Pods-NiceArticle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceArticle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle.debug.xcconfig"; sourceTree = "<group>"; };
+		ED81BC293334BE6D05C54447 /* Pods_NiceArticle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiceArticle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D763301D792A2800A720FE /* NiceArticle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiceArticle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D763341D792A2800A720FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8D763361D792A2800A720FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +55,9 @@
 		F8DE925E1D87CE7B004DADDD /* NAAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAAddViewController.m; sourceTree = "<group>"; };
 		F8DE925F1D87CE7B004DADDD /* NAArticleItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAArticleItemModel.h; sourceTree = "<group>"; };
 		F8DE92601D87CE7B004DADDD /* NAArticleItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAArticleItemModel.m; sourceTree = "<group>"; };
+		F8DE92751D87D929004DADDD /* NAAddHeaderViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAAddHeaderViewCell.h; path = cell/NAAddHeaderViewCell.h; sourceTree = "<group>"; };
+		F8DE92761D87D929004DADDD /* NAAddHeaderViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAAddHeaderViewCell.m; path = cell/NAAddHeaderViewCell.m; sourceTree = "<group>"; };
+		F8DE92771D87D929004DADDD /* NAAddHeaderViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NAAddHeaderViewCell.xib; path = cell/NAAddHeaderViewCell.xib; sourceTree = "<group>"; };
 		F8F199B91D7D65C800F34694 /* JXMovableCellTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXMovableCellTableView.m; path = library/widget/tableview/JXMovableCellTableView.m; sourceTree = "<group>"; };
 		F8F199BA1D7D65C800F34694 /* JXMovableCellTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXMovableCellTableView.h; path = library/widget/tableview/JXMovableCellTableView.h; sourceTree = "<group>"; };
 		F8F199C21D7EB44A00F34694 /* MDeviceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDeviceUtil.h; path = library/utils/MDeviceUtil.h; sourceTree = "<group>"; };
@@ -64,28 +69,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62BB07076A9E0B459D9B1E8E /* Pods_NiceArticle.framework in Frameworks */,
+				2EFE2BF112DE0FF347FA4BCA /* Pods_NiceArticle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		128AAD003F3A1D8D3B4A3371 /* Frameworks */ = {
+		6F602711D7675708E3D54734 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B6114C3CD9DCA66ABE508696 /* Pods_NiceArticle.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5727A8BD451A33A18ADFD482 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				31B5C892AA1A0EDECB0D12A9 /* Pods-NiceArticle.debug.xcconfig */,
-				AF4885BD70387C59DCDCDA67 /* Pods-NiceArticle.release.xcconfig */,
+				57929C07F38C432682F1D9B2 /* Pods-NiceArticle.debug.xcconfig */,
+				17B208CA4BFCABED8528D263 /* Pods-NiceArticle.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		93F07F322AE8C39136B56290 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED81BC293334BE6D05C54447 /* Pods_NiceArticle.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F8D763271D792A2800A720FE = {
@@ -93,8 +98,8 @@
 			children = (
 				F8D763321D792A2800A720FE /* NiceArticle */,
 				F8D763311D792A2800A720FE /* Products */,
-				5727A8BD451A33A18ADFD482 /* Pods */,
-				128AAD003F3A1D8D3B4A3371 /* Frameworks */,
+				6F602711D7675708E3D54734 /* Pods */,
+				93F07F322AE8C39136B56290 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,6 +211,7 @@
 		F8DE925C1D87CE7B004DADDD /* add */ = {
 			isa = PBXGroup;
 			children = (
+				F8DE92741D87D8A2004DADDD /* cell */,
 				F8DE925D1D87CE7B004DADDD /* NAAddViewController.h */,
 				F8DE925E1D87CE7B004DADDD /* NAAddViewController.m */,
 				F8DE925F1D87CE7B004DADDD /* NAArticleItemModel.h */,
@@ -213,6 +219,16 @@
 			);
 			name = add;
 			path = modules/add;
+			sourceTree = "<group>";
+		};
+		F8DE92741D87D8A2004DADDD /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				F8DE92751D87D929004DADDD /* NAAddHeaderViewCell.h */,
+				F8DE92761D87D929004DADDD /* NAAddHeaderViewCell.m */,
+				F8DE92771D87D929004DADDD /* NAAddHeaderViewCell.xib */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 		F8F199B41D7D62A900F34694 /* widget */ = {
@@ -239,12 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8D7634A1D792A2800A720FE /* Build configuration list for PBXNativeTarget "NiceArticle" */;
 			buildPhases = (
-				C98DDFDF79BFE2192AFB0E35 /* Check Pods Manifest.lock */,
+				15F4B33137BC6CADD9CEBA82 /* [CP] Check Pods Manifest.lock */,
 				F8D7632C1D792A2800A720FE /* Sources */,
 				F8D7632D1D792A2800A720FE /* Frameworks */,
 				F8D7632E1D792A2800A720FE /* Resources */,
-				EBE10DD35D7F8FD79E197751 /* Embed Pods Frameworks */,
-				1AD6EA6B6B02EB58A2F6FBCE /* Copy Pods Resources */,
+				35605FF98EA9C428F966B8A1 /* [CP] Embed Pods Frameworks */,
+				F77BE03AE6A2D035A4A86C27 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,35 +311,21 @@
 			files = (
 				F8D763461D792A2800A720FE /* LaunchScreen.storyboard in Resources */,
 				F8D763431D792A2800A720FE /* Assets.xcassets in Resources */,
+				F8DE92791D87D929004DADDD /* NAAddHeaderViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1AD6EA6B6B02EB58A2F6FBCE /* Copy Pods Resources */ = {
+		15F4B33137BC6CADD9CEBA82 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C98DDFDF79BFE2192AFB0E35 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,19 +333,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EBE10DD35D7F8FD79E197751 /* Embed Pods Frameworks */ = {
+		35605FF98EA9C428F966B8A1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F77BE03AE6A2D035A4A86C27 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -361,6 +378,7 @@
 				F8D7635B1D792F0800A720FE /* NAHomeViewController.m in Sources */,
 				F8DE92621D87CE7B004DADDD /* NAFindViewController.m in Sources */,
 				F8D763381D792A2800A720FE /* AppDelegate.m in Sources */,
+				F8DE92781D87D929004DADDD /* NAAddHeaderViewCell.m in Sources */,
 				F8DE92551D87CE4A004DADDD /* NACaoGaoViewController.m in Sources */,
 				F8D763351D792A2800A720FE /* main.m in Sources */,
 				F8F199BB1D7D65C800F34694 /* JXMovableCellTableView.m in Sources */,
@@ -467,7 +485,7 @@
 		};
 		F8D7634B1D792A2800A720FE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31B5C892AA1A0EDECB0D12A9 /* Pods-NiceArticle.debug.xcconfig */;
+			baseConfigurationReference = 57929C07F38C432682F1D9B2 /* Pods-NiceArticle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NiceArticle/Info.plist;
@@ -479,7 +497,7 @@
 		};
 		F8D7634C1D792A2800A720FE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF4885BD70387C59DCDCDA67 /* Pods-NiceArticle.release.xcconfig */;
+			baseConfigurationReference = 17B208CA4BFCABED8528D263 /* Pods-NiceArticle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NiceArticle/Info.plist;
