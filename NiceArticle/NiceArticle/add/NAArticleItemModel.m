@@ -33,27 +33,23 @@
     return self;
 }
 
-+(UIView*) createTableViewHeader:(UITableView*)tableView  itemModel:(NAArticleItemModel*)itemModel setDelegate:(id<UITextFieldDelegate> )delegate{
++(UIView*) createTableViewHeader:(UITableView*)tableView  itemModel:(NAArticleItemModel*)itemModel setDelegate:(id<UITextViewDelegate> )delegate{
     UIView *contentHeaderView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, [MDeviceUtil getScreenRect].size.width, 100)];
-    
-    UITextField *textField=nil;
-    CGRect frame=CGRectMake(10, 10, [MDeviceUtil getScreenRect].size.width-20, 80);
-    textField=[[UITextField alloc]initWithFrame:frame];
-    [textField setTextColor:[UIColor blackColor]];
-    textField.borderStyle = UITextBorderStyleRoundedRect;//边框风格
-    textField.autocorrectionType = UITextAutocorrectionTypeYes;//设置是否启动自动提醒更正功能
-    textField.placeholder = @"点击输入标题";//默认的文本显示
-    textField.returnKeyType = UIReturnKeyDone;//设置键盘完成的按钮
-    textField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    textField.delegate = delegate;
-    [textField setBackgroundColor:[UIColor whiteColor]];
-    [textField setFont:[UIFont fontWithName:@"Arial" size:12]];
-    [textField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
-    textField.textAlignment=NSTextAlignmentLeft;
+    UITextView *textView=[[UITextView alloc]initWithFrame:CGRectMake(10, 10, [MDeviceUtil getScreenRect].size.width-20, 80)];
+    [textView setTextColor:[UIColor blackColor]];
+    [textView setAutocorrectionType:UITextAutocorrectionTypeNo];//设置是否启动自动提醒更正功能
+    [textView setText:nil];
+    [textView setReturnKeyType:UIReturnKeyDone];//设置键盘完成的按钮
+    [textView setDelegate:delegate];
+    [textView setScrollEnabled:false];
+    [textView setBackgroundColor:[UIColor whiteColor]];
+    [textView setFont:[UIFont fontWithName:@"Arial" size:12]];
+    [textView setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
     [contentHeaderView setBackgroundColor:[UIColor clearColor]];
-    [contentHeaderView addSubview:textField];
+    [contentHeaderView addSubview:textView];
     return contentHeaderView;
 }
+
 
 +(UITableViewCell*) createTableViewCellText:(UITableView*)tableView  itemModel:(NAArticleItemModel*)itemModel{
     UITableViewCell *uiTableViewCell=[tableView dequeueReusableCellWithIdentifier:@"createTableViewCellText"];

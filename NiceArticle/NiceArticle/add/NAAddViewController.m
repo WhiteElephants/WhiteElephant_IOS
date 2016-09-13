@@ -79,23 +79,12 @@
         movableCell.layer.shadowRadius = 7;
     };
 }
-
-//当开始点击textField会调用的方法
--(void)textFieldDidBeginEditing:(UITextField *)textField{
+- (void)textViewDidBeginEditing:(UITextView *)textView{
     [MToastUtil showWithText:@"beigin"];
+
 }
-
-//当textField编辑结束时调用的方法
--(void)textFieldDidEndEditing:(UITextField *)textField{
-    [MToastUtil showWithText:@"end"];
-}
-
-
-//按下Done按钮的调用方法，我们让键盘消失
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [MToastUtil showWithText:@"return"];
-    //[textField resignFirstResponder];
-    return YES;
+- (void)textViewDidEndEditing:(UITextView *)textView{
+     [MToastUtil showWithText:@"end"];
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
