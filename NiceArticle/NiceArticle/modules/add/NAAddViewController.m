@@ -83,23 +83,8 @@
     [MToastUtil showWithText:@"beigin"];
 
 }
--(void)textViewDidChange:(UITextView *)textView{
-    [self.uiTableView beginUpdates]; // This will cause an animated update of
-    CGRect frame=textView.frame;
-    frame.size.height= [self textViewHeightForAttributedText:textView.text andWidth:120];
-    textView.frame=frame;
-    [self.uiTableView endUpdates];   // the height of your UITableViewCell
-}
-
 - (void)textViewDidEndEditing:(UITextView *)textView{
      [MToastUtil showWithText:@"end"];
-}
-
-- (CGFloat)textViewHeightForAttributedText: (NSAttributedString*)text andWidth: (CGFloat)width {
-    UITextView *calculationView = [[UITextView alloc] init];
-    [calculationView setAttributedText:text];
-    CGSize size = [calculationView sizeThatFits:CGSizeMake(width, FLT_MAX)];
-    return size.height;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
