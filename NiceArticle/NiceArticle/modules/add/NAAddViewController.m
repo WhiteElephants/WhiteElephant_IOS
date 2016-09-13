@@ -46,9 +46,9 @@ static NSString* reuseId=@"reuse";
         int i=0;
         for (NSInteger row = 0; row < 30; row ++) {
             NAArticleItemModel *itemModel=[[NAArticleItemModel alloc] initWithIdAndType:row setType:(row%3==0?TEXT:(row%3==1?IMAGE:MULTI_IMAGE))];
-            if(i%3==0)itemModel.content=@"一行内容\n\n";
-            if(i%3==1)itemModel.content=@"二行内容\n二行内容\n\n";
-            if(i%3==2)itemModel.content=@"三行内容\n三行内容\n三行内容\n\n";
+            if(i%3==0)itemModel.content=@"一行内容";
+            if(i%3==1)itemModel.content=@"二行内容\n二行内容";
+            if(i%3==2)itemModel.content=@"三行内容\n三行内容\n三行内容";
             [sectionArray addObject:itemModel];
             
             if(row%3==0)
@@ -148,11 +148,9 @@ static NSString* reuseId=@"reuse";
             if(itemModel.isTextChangedAfterCalHeight){
                 NAAddHeaderViewCell *cell = (NAAddHeaderViewCell *)self.prototypeCell;
                 cell.textView.text = itemModel.content;
-                CGSize s =  [cell.textView sizeThatFits:CGSizeMake(cell.textView.frame.size.width, FLT_MAX)];
-                CGFloat defaultHeight = cell.contentView.frame.size.height;
-                CGFloat height = s.height > defaultHeight ? s.height : defaultHeight;
-                heightForRow= 1  + height;
-                
+                CGSize newTextViewSize = [cell.textView sizeThatFits:CGSizeMake(cell.textView.frame.size.width, FLT_MAX)];
+                CGFloat currentContentViewHeight = cell.contentView.frame.size.height;
+                heightForRow= newTextViewSize.height > currentContentViewHeight ? newTextViewSize.height : currentContentViewHeight;
                 itemModel.isTextChangedAfterCalHeight=false;
                 itemModel.cacheHeight=heightForRow;
                 NSLog(@"实时计算高度:%f",heightForRow);
