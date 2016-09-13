@@ -23,6 +23,8 @@ typedef enum {
 @property NSString *content;
 @property NSString *imagePath;
 @property NAArticalItemType itemType;
+@property CGFloat cacheHeight;
+@property BOOL isTextChangedAfterCalHeight;
 
 -(instancetype)initWithIdAndType:(NSInteger)id setType:(NAArticalItemType)type;
 

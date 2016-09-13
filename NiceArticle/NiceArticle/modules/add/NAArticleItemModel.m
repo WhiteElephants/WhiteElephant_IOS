@@ -14,24 +14,21 @@
 @implementation NAArticleItemModel
 
 -(instancetype)init{
-    self=[super init];
-    return self;
+    return [self initWithId:0];
 }
 -(instancetype)initWithId:(NSInteger)id{
-    self=[super init];
-    if(self){
-        [self setId:id];
-    }
-    return self;
+    return [self initWithIdAndType:id setType:TEXT];
 }
 -(instancetype)initWithIdAndType:(NSInteger)id setType:(NAArticalItemType)type{
     self=[super init];
     if(self){
         [self setId:id];
         [self setItemType:type];
+        [self setIsTextChangedAfterCalHeight:true];
     }
     return self;
 }
+
 
 +(UIView*) createTableViewHeader:(UITableView*)tableView  itemModel:(NAArticleItemModel*)itemModel setDelegate:(id<UITextViewDelegate> )delegate{
     UIView *contentHeaderView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, [MDeviceUtil getScreenRect].size.width, 100)];
@@ -84,6 +81,8 @@
         uiTableViewCell.backgroundView = [[UIView alloc] initWithFrame:uiTableViewCell.frame];
         uiTableViewCell.backgroundView.backgroundColor=[UIColor greenColor];
         //uiTableViewCell.selectionStyle=UITableViewCellSelectionStyleNone;
+    }else{
+        NSLog(@"复用:createTableViewCellImage");
     }
      uiTableViewCell.textLabel.text= [NSString stringWithFormat:@"%ld,type:%u",itemModel.id,itemModel.itemType];
     return uiTableViewCell;

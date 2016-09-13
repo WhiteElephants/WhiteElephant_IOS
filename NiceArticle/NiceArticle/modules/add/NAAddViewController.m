@@ -43,9 +43,16 @@ static NSString* reuseId=@"reuse";
     self.dataArray=[NSMutableArray new];
     for (NSInteger section = 0; section < 1; section++) {
         NSMutableArray *sectionArray = [NSMutableArray new];
+        int i=0;
         for (NSInteger row = 0; row < 30; row ++) {
             NAArticleItemModel *itemModel=[[NAArticleItemModel alloc] initWithIdAndType:row setType:(row%3==0?TEXT:(row%3==1?IMAGE:MULTI_IMAGE))];
+            if(i%3==0)itemModel.content=@"一行内容\n\n";
+            if(i%3==1)itemModel.content=@"二行内容\n二行内容\n\n";
+            if(i%3==2)itemModel.content=@"三行内容\n三行内容\n三行内容\n\n";
             [sectionArray addObject:itemModel];
+            
+            if(row%3==0)
+                i++;
         }
         [self.dataArray addObject:sectionArray];
     }
@@ -91,26 +98,46 @@ static NSString* reuseId=@"reuse";
     
     self.prototypeCell  = [self.uiTableView dequeueReusableCellWithIdentifier:reuseId];
 }
-- (void)textViewDidBeginEditing:(UITextView *)textView{
-    [MToastUtil showWithText:@"beigin"];
 
-}
-- (void)textViewDidEndEditing:(UITextView *)textView{
-     [MToastUtil showWithText:@"end"];
-}
 #pragma mark - UITextViewDelegate
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     if ([text isEqualToString:@"\n"]) {
-        NSLog(@"h=%f", textView.contentSize.height);
+        NSLog(@"shouldChangeTextInRange:%@, height:%f",text, textView.contentSize.height);
     }
     return YES;
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
+    NSLog(@"textViewDidChange");
     NAArticleItemModel*itemModel=[self.dataArray[0] objectAtIndex:textView.tag];
     itemModel.content=textView.text;
+    itemModel.isTextChangedAfterCalHeight=true;
     [self.uiTableView beginUpdates];
     [self.uiTableView endUpdates];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NAArticleItemModel*itemModel=[self.dataArray[indexPath.section] objectAtIndex:indexPath.row];
+    UITableViewCell *uiTableViewCell=nil;
+    
+    switch (itemModel.itemType) {
+        default:
+        case TEXT:{
+            NAAddHeaderViewCell *headerViewCell=[self.uiTableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
+            [headerViewCell.textView setDelegate:self];
+            [headerViewCell.textView setTag:indexPath.row];
+            [headerViewCell.textView setText:itemModel.content];
+            uiTableViewCell=headerViewCell;
+            break;
+        }
+        case IMAGE:
+            uiTableViewCell=[NAArticleItemModel createTableViewCellImage:tableView itemModel:itemModel];
+            break;
+        case MULTI_IMAGE:
+            uiTableViewCell=[NAArticleItemModel createTableViewCellMultiImage:tableView itemModel:itemModel];
+            break;
+    }
+    return uiTableViewCell;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -118,12 +145,21 @@ static NSString* reuseId=@"reuse";
     NAArticleItemModel*itemModel=[self.dataArray[indexPath.section] objectAtIndex:indexPath.row];
     switch (itemModel.itemType) {
         case TEXT:{
-            NAAddHeaderViewCell *cell = (NAAddHeaderViewCell *)self.prototypeCell;
-            cell.textView.text = itemModel.content;
-            CGSize s =  [cell.textView sizeThatFits:CGSizeMake(cell.textView.frame.size.width, FLT_MAX)];
-            CGFloat defaultHeight = cell.contentView.frame.size.height;
-            CGFloat height = s.height > defaultHeight ? s.height : defaultHeight;
-            heightForRow= 1  + height;
+            if(itemModel.isTextChangedAfterCalHeight){
+                NAAddHeaderViewCell *cell = (NAAddHeaderViewCell *)self.prototypeCell;
+                cell.textView.text = itemModel.content;
+                CGSize s =  [cell.textView sizeThatFits:CGSizeMake(cell.textView.frame.size.width, FLT_MAX)];
+                CGFloat defaultHeight = cell.contentView.frame.size.height;
+                CGFloat height = s.height > defaultHeight ? s.height : defaultHeight;
+                heightForRow= 1  + height;
+                
+                itemModel.isTextChangedAfterCalHeight=false;
+                itemModel.cacheHeight=heightForRow;
+                NSLog(@"实时计算高度:%f",heightForRow);
+            }else{
+                heightForRow=itemModel.cacheHeight;
+                NSLog(@"使用缓存高度:%f",heightForRow);
+            }
             break;
         }
         default:
@@ -167,29 +203,6 @@ static NSString* reuseId=@"reuse";
 
 - (void)tableView:(JXMovableCellTableView *)tableView didMoveCellFromIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath{
     NSLog(@"moveRowAtIndexPath:fromIndexPath:%ld,toIndexPath:%ld",fromIndexPath.row,toIndexPath.row);
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NAArticleItemModel*itemModel=[self.dataArray[indexPath.section] objectAtIndex:indexPath.row];
-    UITableViewCell *uiTableViewCell=nil;
-  
-    switch (itemModel.itemType) {
-        default:
-        case TEXT:{
-            NAAddHeaderViewCell *headerViewCell=[self.uiTableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
-            [headerViewCell.textView setDelegate:self];
-            [headerViewCell.textView setTag:indexPath.row];
-            uiTableViewCell=headerViewCell;
-            break;
-        }
-        case IMAGE:
-            uiTableViewCell=[NAArticleItemModel createTableViewCellImage:tableView itemModel:itemModel];
-            break;
-        case MULTI_IMAGE:
-            uiTableViewCell=[NAArticleItemModel createTableViewCellMultiImage:tableView itemModel:itemModel];
-            break;
-    }
-    return uiTableViewCell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

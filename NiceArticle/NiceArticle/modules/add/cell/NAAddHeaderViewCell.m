@@ -12,7 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    [_textView setText:@"您好大神您好大神您好大神您好大神您好大神您好大神您好大神您好大神您好大神您好大神您好大神您好大神您好大神您好大神您好大神您好大神您好大神您好大神"];
+    [_textView setText:@"请输入中文"];
     [_textView setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleCaption2 ]];
 }
 
