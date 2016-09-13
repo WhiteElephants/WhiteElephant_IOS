@@ -7,59 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		62BB07076A9E0B459D9B1E8E /* Pods_NiceArticle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6114C3CD9DCA66ABE508696 /* Pods_NiceArticle.framework */; };
+		F691335B965EAFAD78308044 /* Pods_NiceArticle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50D151A384A104F3F52D16B /* Pods_NiceArticle.framework */; };
 		F8D763351D792A2800A720FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763341D792A2800A720FE /* main.m */; };
 		F8D763381D792A2800A720FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763371D792A2800A720FE /* AppDelegate.m */; };
-		F8D7633B1D792A2800A720FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D7633A1D792A2800A720FE /* ViewController.m */; };
 		F8D7633E1D792A2800A720FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8D7633C1D792A2800A720FE /* Main.storyboard */; };
 		F8D763411D792A2800A720FE /* NiceArticle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8D7633F1D792A2800A720FE /* NiceArticle.xcdatamodeld */; };
 		F8D763431D792A2800A720FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D763421D792A2800A720FE /* Assets.xcassets */; };
 		F8D763461D792A2800A720FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8D763441D792A2800A720FE /* LaunchScreen.storyboard */; };
-		F8D763561D792CD200A720FE /* NAMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763551D792CD200A720FE /* NAMineViewController.m */; };
-		F8D7635B1D792F0800A720FE /* NAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D7635A1D792F0800A720FE /* NAHomeViewController.m */; };
-		F8D7635E1D79319600A720FE /* NAMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D7635D1D79319600A720FE /* NAMainViewController.m */; };
-		F8D763621D794B7F00A720FE /* NAFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763611D794B7F00A720FE /* NAFindViewController.m */; };
-		F8D763661D794C1600A720FE /* NACaoGaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763651D794C1600A720FE /* NACaoGaoViewController.m */; };
 		F8D7636A1D79637A00A720FE /* MToastUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763691D79637A00A720FE /* MToastUtil.m */; };
-		F8D763701D7966A000A720FE /* NAAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D7636F1D7966A000A720FE /* NAAddViewController.m */; };
+		F8DE92151D879E5F004DADDD /* NetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE920D1D879E5F004DADDD /* NetAPIClient.m */; };
+		F8DE92161D879E5F004DADDD /* NetAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE920F1D879E5F004DADDD /* NetAPIManager.m */; };
+		F8DE92171D879E5F004DADDD /* NSObject+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE92121D879E5F004DADDD /* NSObject+Common.m */; };
+		F8DE92181D879E5F004DADDD /* NSObject+ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE92141D879E5F004DADDD /* NSObject+ObjectMap.m */; };
+		F8DE92481D87A08A004DADDD /* NAAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE92371D87A08A004DADDD /* NAAddViewController.m */; };
+		F8DE92491D87A08A004DADDD /* NAArticleItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE92391D87A08A004DADDD /* NAArticleItemModel.m */; };
+		F8DE924A1D87A08A004DADDD /* NACaoGaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE923C1D87A08A004DADDD /* NACaoGaoViewController.m */; };
+		F8DE924B1D87A08A004DADDD /* NAFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE923F1D87A08A004DADDD /* NAFindViewController.m */; };
+		F8DE924C1D87A08A004DADDD /* NAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE92421D87A08A004DADDD /* NAHomeViewController.m */; };
+		F8DE924D1D87A08A004DADDD /* NAMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE92441D87A08A004DADDD /* NAMainViewController.m */; };
+		F8DE924E1D87A08A004DADDD /* NAMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8DE92471D87A08A004DADDD /* NAMineViewController.m */; };
 		F8F199BB1D7D65C800F34694 /* JXMovableCellTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F199B91D7D65C800F34694 /* JXMovableCellTableView.m */; };
-		F8F199BE1D7E6F0B00F34694 /* NAArticleItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F199BD1D7E6F0B00F34694 /* NAArticleItemModel.m */; };
 		F8F199C41D7EB44A00F34694 /* MDeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F199C31D7EB44A00F34694 /* MDeviceUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		31B5C892AA1A0EDECB0D12A9 /* Pods-NiceArticle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceArticle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle.debug.xcconfig"; sourceTree = "<group>"; };
-		AF4885BD70387C59DCDCDA67 /* Pods-NiceArticle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceArticle.release.xcconfig"; path = "Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle.release.xcconfig"; sourceTree = "<group>"; };
-		B6114C3CD9DCA66ABE508696 /* Pods_NiceArticle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiceArticle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		301EC42BA9D4EC753DE64816 /* Pods-NiceArticle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceArticle.release.xcconfig"; path = "Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle.release.xcconfig"; sourceTree = "<group>"; };
+		4652500433CCF8300BD9D819 /* Pods-NiceArticle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceArticle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle.debug.xcconfig"; sourceTree = "<group>"; };
+		A50D151A384A104F3F52D16B /* Pods_NiceArticle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiceArticle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D763301D792A2800A720FE /* NiceArticle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiceArticle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D763341D792A2800A720FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8D763361D792A2800A720FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F8D763371D792A2800A720FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F8D763391D792A2800A720FE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F8D7633A1D792A2800A720FE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F8D7633D1D792A2800A720FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8D763401D792A2800A720FE /* NiceArticle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NiceArticle.xcdatamodel; sourceTree = "<group>"; };
 		F8D763421D792A2800A720FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8D763451D792A2800A720FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8D763471D792A2800A720FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8D763541D792CD200A720FE /* NAMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAMineViewController.h; path = mine/NAMineViewController.h; sourceTree = "<group>"; };
-		F8D763551D792CD200A720FE /* NAMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAMineViewController.m; path = mine/NAMineViewController.m; sourceTree = "<group>"; };
-		F8D763591D792F0800A720FE /* NAHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAHomeViewController.h; path = modules/home/NAHomeViewController.h; sourceTree = "<group>"; };
-		F8D7635A1D792F0800A720FE /* NAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAHomeViewController.m; path = modules/home/NAHomeViewController.m; sourceTree = "<group>"; };
-		F8D7635C1D79319600A720FE /* NAMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAMainViewController.h; path = modules/home/NAMainViewController.h; sourceTree = "<group>"; };
-		F8D7635D1D79319600A720FE /* NAMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAMainViewController.m; path = modules/home/NAMainViewController.m; sourceTree = "<group>"; };
-		F8D763601D794B7F00A720FE /* NAFindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAFindViewController.h; path = find/NAFindViewController.h; sourceTree = "<group>"; };
-		F8D763611D794B7F00A720FE /* NAFindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAFindViewController.m; path = find/NAFindViewController.m; sourceTree = "<group>"; };
-		F8D763641D794C1600A720FE /* NACaoGaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NACaoGaoViewController.h; path = caogao/NACaoGaoViewController.h; sourceTree = "<group>"; };
-		F8D763651D794C1600A720FE /* NACaoGaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NACaoGaoViewController.m; path = caogao/NACaoGaoViewController.m; sourceTree = "<group>"; };
 		F8D763691D79637A00A720FE /* MToastUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MToastUtil.m; path = library/utils/MToastUtil.m; sourceTree = "<group>"; };
 		F8D7636C1D79648000A720FE /* MToastUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MToastUtil.h; path = library/utils/MToastUtil.h; sourceTree = "<group>"; };
-		F8D7636E1D7966A000A720FE /* NAAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAAddViewController.h; path = add/NAAddViewController.h; sourceTree = "<group>"; };
-		F8D7636F1D7966A000A720FE /* NAAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAAddViewController.m; path = add/NAAddViewController.m; sourceTree = "<group>"; };
+		F8DE920C1D879E5F004DADDD /* NetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetAPIClient.h; sourceTree = "<group>"; };
+		F8DE920D1D879E5F004DADDD /* NetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetAPIClient.m; sourceTree = "<group>"; };
+		F8DE920E1D879E5F004DADDD /* NetAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetAPIManager.h; sourceTree = "<group>"; };
+		F8DE920F1D879E5F004DADDD /* NetAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetAPIManager.m; sourceTree = "<group>"; };
+		F8DE92111D879E5F004DADDD /* NSObject+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Common.h"; sourceTree = "<group>"; };
+		F8DE92121D879E5F004DADDD /* NSObject+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Common.m"; sourceTree = "<group>"; };
+		F8DE92131D879E5F004DADDD /* NSObject+ObjectMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ObjectMap.h"; sourceTree = "<group>"; };
+		F8DE92141D879E5F004DADDD /* NSObject+ObjectMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ObjectMap.m"; sourceTree = "<group>"; };
+		F8DE92361D87A08A004DADDD /* NAAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAAddViewController.h; sourceTree = "<group>"; };
+		F8DE92371D87A08A004DADDD /* NAAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAAddViewController.m; sourceTree = "<group>"; };
+		F8DE92381D87A08A004DADDD /* NAArticleItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAArticleItemModel.h; sourceTree = "<group>"; };
+		F8DE92391D87A08A004DADDD /* NAArticleItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAArticleItemModel.m; sourceTree = "<group>"; };
+		F8DE923B1D87A08A004DADDD /* NACaoGaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NACaoGaoViewController.h; sourceTree = "<group>"; };
+		F8DE923C1D87A08A004DADDD /* NACaoGaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NACaoGaoViewController.m; sourceTree = "<group>"; };
+		F8DE923E1D87A08A004DADDD /* NAFindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAFindViewController.h; sourceTree = "<group>"; };
+		F8DE923F1D87A08A004DADDD /* NAFindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAFindViewController.m; sourceTree = "<group>"; };
+		F8DE92411D87A08A004DADDD /* NAHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAHomeViewController.h; sourceTree = "<group>"; };
+		F8DE92421D87A08A004DADDD /* NAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAHomeViewController.m; sourceTree = "<group>"; };
+		F8DE92431D87A08A004DADDD /* NAMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAMainViewController.h; sourceTree = "<group>"; };
+		F8DE92441D87A08A004DADDD /* NAMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAMainViewController.m; sourceTree = "<group>"; };
+		F8DE92461D87A08A004DADDD /* NAMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAMineViewController.h; sourceTree = "<group>"; };
+		F8DE92471D87A08A004DADDD /* NAMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAMineViewController.m; sourceTree = "<group>"; };
 		F8F199B91D7D65C800F34694 /* JXMovableCellTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXMovableCellTableView.m; path = library/widget/tableview/JXMovableCellTableView.m; sourceTree = "<group>"; };
 		F8F199BA1D7D65C800F34694 /* JXMovableCellTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXMovableCellTableView.h; path = library/widget/tableview/JXMovableCellTableView.h; sourceTree = "<group>"; };
-		F8F199BC1D7E6F0B00F34694 /* NAArticleItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NAArticleItemModel.h; path = add/NAArticleItemModel.h; sourceTree = "<group>"; };
-		F8F199BD1D7E6F0B00F34694 /* NAArticleItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NAArticleItemModel.m; path = add/NAArticleItemModel.m; sourceTree = "<group>"; };
 		F8F199C21D7EB44A00F34694 /* MDeviceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDeviceUtil.h; path = library/utils/MDeviceUtil.h; sourceTree = "<group>"; };
 		F8F199C31D7EB44A00F34694 /* MDeviceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDeviceUtil.m; path = library/utils/MDeviceUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,26 +78,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62BB07076A9E0B459D9B1E8E /* Pods_NiceArticle.framework in Frameworks */,
+				F691335B965EAFAD78308044 /* Pods_NiceArticle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		128AAD003F3A1D8D3B4A3371 /* Frameworks */ = {
+		0CC268C0A4941A1F3A537F19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B6114C3CD9DCA66ABE508696 /* Pods_NiceArticle.framework */,
+				A50D151A384A104F3F52D16B /* Pods_NiceArticle.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5727A8BD451A33A18ADFD482 /* Pods */ = {
+		1CD8BBD76A307160AF79FA5D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				31B5C892AA1A0EDECB0D12A9 /* Pods-NiceArticle.debug.xcconfig */,
-				AF4885BD70387C59DCDCDA67 /* Pods-NiceArticle.release.xcconfig */,
+				4652500433CCF8300BD9D819 /* Pods-NiceArticle.debug.xcconfig */,
+				301EC42BA9D4EC753DE64816 /* Pods-NiceArticle.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -98,8 +107,8 @@
 			children = (
 				F8D763321D792A2800A720FE /* NiceArticle */,
 				F8D763311D792A2800A720FE /* Products */,
-				5727A8BD451A33A18ADFD482 /* Pods */,
-				128AAD003F3A1D8D3B4A3371 /* Frameworks */,
+				1CD8BBD76A307160AF79FA5D /* Pods */,
+				0CC268C0A4941A1F3A537F19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,12 +123,11 @@
 		F8D763321D792A2800A720FE /* NiceArticle */ = {
 			isa = PBXGroup;
 			children = (
+				F8DE92341D87A08A004DADDD /* modules */,
+				F8DE920A1D879E5F004DADDD /* Net */,
 				F8D763671D79630A00A720FE /* library */,
-				F8D7634E1D792AA100A720FE /* modules */,
 				F8D763361D792A2800A720FE /* AppDelegate.h */,
 				F8D763371D792A2800A720FE /* AppDelegate.m */,
-				F8D763391D792A2800A720FE /* ViewController.h */,
-				F8D7633A1D792A2800A720FE /* ViewController.m */,
 				F8D7633C1D792A2800A720FE /* Main.storyboard */,
 				F8D763421D792A2800A720FE /* Assets.xcassets */,
 				F8D763441D792A2800A720FE /* LaunchScreen.storyboard */,
@@ -136,56 +144,6 @@
 				F8D763341D792A2800A720FE /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F8D7634E1D792AA100A720FE /* modules */ = {
-			isa = PBXGroup;
-			children = (
-				F8D7636D1D79667600A720FE /* add */,
-				F8D763631D794BFA00A720FE /* caogao */,
-				F8D7635F1D794B4D00A720FE /* find */,
-				F8D763531D792CA200A720FE /* mine */,
-				F8D7634F1D792AAD00A720FE /* home */,
-			);
-			name = modules;
-			sourceTree = "<group>";
-		};
-		F8D7634F1D792AAD00A720FE /* home */ = {
-			isa = PBXGroup;
-			children = (
-				F8D763591D792F0800A720FE /* NAHomeViewController.h */,
-				F8D7635A1D792F0800A720FE /* NAHomeViewController.m */,
-				F8D7635C1D79319600A720FE /* NAMainViewController.h */,
-				F8D7635D1D79319600A720FE /* NAMainViewController.m */,
-			);
-			name = home;
-			sourceTree = "<group>";
-		};
-		F8D763531D792CA200A720FE /* mine */ = {
-			isa = PBXGroup;
-			children = (
-				F8D763541D792CD200A720FE /* NAMineViewController.h */,
-				F8D763551D792CD200A720FE /* NAMineViewController.m */,
-			);
-			name = mine;
-			sourceTree = "<group>";
-		};
-		F8D7635F1D794B4D00A720FE /* find */ = {
-			isa = PBXGroup;
-			children = (
-				F8D763601D794B7F00A720FE /* NAFindViewController.h */,
-				F8D763611D794B7F00A720FE /* NAFindViewController.m */,
-			);
-			name = find;
-			sourceTree = "<group>";
-		};
-		F8D763631D794BFA00A720FE /* caogao */ = {
-			isa = PBXGroup;
-			children = (
-				F8D763641D794C1600A720FE /* NACaoGaoViewController.h */,
-				F8D763651D794C1600A720FE /* NACaoGaoViewController.m */,
-			);
-			name = caogao;
 			sourceTree = "<group>";
 		};
 		F8D763671D79630A00A720FE /* library */ = {
@@ -208,15 +166,96 @@
 			name = utils;
 			sourceTree = "<group>";
 		};
-		F8D7636D1D79667600A720FE /* add */ = {
+		F8DE920A1D879E5F004DADDD /* Net */ = {
 			isa = PBXGroup;
 			children = (
-				F8D7636E1D7966A000A720FE /* NAAddViewController.h */,
-				F8D7636F1D7966A000A720FE /* NAAddViewController.m */,
-				F8F199BC1D7E6F0B00F34694 /* NAArticleItemModel.h */,
-				F8F199BD1D7E6F0B00F34694 /* NAArticleItemModel.m */,
+				F8DE920B1D879E5F004DADDD /* Net_Manager */,
+				F8DE92101D879E5F004DADDD /* OC_Category */,
 			);
-			name = add;
+			path = Net;
+			sourceTree = "<group>";
+		};
+		F8DE920B1D879E5F004DADDD /* Net_Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F8DE920C1D879E5F004DADDD /* NetAPIClient.h */,
+				F8DE920D1D879E5F004DADDD /* NetAPIClient.m */,
+				F8DE920E1D879E5F004DADDD /* NetAPIManager.h */,
+				F8DE920F1D879E5F004DADDD /* NetAPIManager.m */,
+			);
+			path = Net_Manager;
+			sourceTree = "<group>";
+		};
+		F8DE92101D879E5F004DADDD /* OC_Category */ = {
+			isa = PBXGroup;
+			children = (
+				F8DE92111D879E5F004DADDD /* NSObject+Common.h */,
+				F8DE92121D879E5F004DADDD /* NSObject+Common.m */,
+				F8DE92131D879E5F004DADDD /* NSObject+ObjectMap.h */,
+				F8DE92141D879E5F004DADDD /* NSObject+ObjectMap.m */,
+			);
+			path = OC_Category;
+			sourceTree = "<group>";
+		};
+		F8DE92341D87A08A004DADDD /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				F8DE92351D87A08A004DADDD /* add */,
+				F8DE923A1D87A08A004DADDD /* caogao */,
+				F8DE923D1D87A08A004DADDD /* find */,
+				F8DE92401D87A08A004DADDD /* home */,
+				F8DE92451D87A08A004DADDD /* mine */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		F8DE92351D87A08A004DADDD /* add */ = {
+			isa = PBXGroup;
+			children = (
+				F8DE92361D87A08A004DADDD /* NAAddViewController.h */,
+				F8DE92371D87A08A004DADDD /* NAAddViewController.m */,
+				F8DE92381D87A08A004DADDD /* NAArticleItemModel.h */,
+				F8DE92391D87A08A004DADDD /* NAArticleItemModel.m */,
+			);
+			path = add;
+			sourceTree = "<group>";
+		};
+		F8DE923A1D87A08A004DADDD /* caogao */ = {
+			isa = PBXGroup;
+			children = (
+				F8DE923B1D87A08A004DADDD /* NACaoGaoViewController.h */,
+				F8DE923C1D87A08A004DADDD /* NACaoGaoViewController.m */,
+			);
+			path = caogao;
+			sourceTree = "<group>";
+		};
+		F8DE923D1D87A08A004DADDD /* find */ = {
+			isa = PBXGroup;
+			children = (
+				F8DE923E1D87A08A004DADDD /* NAFindViewController.h */,
+				F8DE923F1D87A08A004DADDD /* NAFindViewController.m */,
+			);
+			path = find;
+			sourceTree = "<group>";
+		};
+		F8DE92401D87A08A004DADDD /* home */ = {
+			isa = PBXGroup;
+			children = (
+				F8DE92411D87A08A004DADDD /* NAHomeViewController.h */,
+				F8DE92421D87A08A004DADDD /* NAHomeViewController.m */,
+				F8DE92431D87A08A004DADDD /* NAMainViewController.h */,
+				F8DE92441D87A08A004DADDD /* NAMainViewController.m */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		F8DE92451D87A08A004DADDD /* mine */ = {
+			isa = PBXGroup;
+			children = (
+				F8DE92461D87A08A004DADDD /* NAMineViewController.h */,
+				F8DE92471D87A08A004DADDD /* NAMineViewController.m */,
+			);
+			path = mine;
 			sourceTree = "<group>";
 		};
 		F8F199B41D7D62A900F34694 /* widget */ = {
@@ -243,12 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8D7634A1D792A2800A720FE /* Build configuration list for PBXNativeTarget "NiceArticle" */;
 			buildPhases = (
-				C98DDFDF79BFE2192AFB0E35 /* Check Pods Manifest.lock */,
+				FDECABB769F8ED13C3D31BE0 /* [CP] Check Pods Manifest.lock */,
 				F8D7632C1D792A2800A720FE /* Sources */,
 				F8D7632D1D792A2800A720FE /* Frameworks */,
 				F8D7632E1D792A2800A720FE /* Resources */,
-				EBE10DD35D7F8FD79E197751 /* Embed Pods Frameworks */,
-				1AD6EA6B6B02EB58A2F6FBCE /* Copy Pods Resources */,
+				BD116D55C99D60ED6672D939 /* [CP] Embed Pods Frameworks */,
+				A1B2939BD43BE771200B4036 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -306,14 +345,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1AD6EA6B6B02EB58A2F6FBCE /* Copy Pods Resources */ = {
+		A1B2939BD43BE771200B4036 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,34 +360,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C98DDFDF79BFE2192AFB0E35 /* Check Pods Manifest.lock */ = {
+		BD116D55C99D60ED6672D939 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		EBE10DD35D7F8FD79E197751 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDECABB769F8ED13C3D31BE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -358,20 +397,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8D763661D794C1600A720FE /* NACaoGaoViewController.m in Sources */,
-				F8D763621D794B7F00A720FE /* NAFindViewController.m in Sources */,
-				F8F199BE1D7E6F0B00F34694 /* NAArticleItemModel.m in Sources */,
-				F8D7633B1D792A2800A720FE /* ViewController.m in Sources */,
-				F8D763701D7966A000A720FE /* NAAddViewController.m in Sources */,
-				F8D763561D792CD200A720FE /* NAMineViewController.m in Sources */,
-				F8D7635E1D79319600A720FE /* NAMainViewController.m in Sources */,
+				F8DE924B1D87A08A004DADDD /* NAFindViewController.m in Sources */,
+				F8DE92161D879E5F004DADDD /* NetAPIManager.m in Sources */,
 				F8D7636A1D79637A00A720FE /* MToastUtil.m in Sources */,
 				F8F199C41D7EB44A00F34694 /* MDeviceUtil.m in Sources */,
-				F8D7635B1D792F0800A720FE /* NAHomeViewController.m in Sources */,
+				F8DE924D1D87A08A004DADDD /* NAMainViewController.m in Sources */,
+				F8DE92481D87A08A004DADDD /* NAAddViewController.m in Sources */,
 				F8D763381D792A2800A720FE /* AppDelegate.m in Sources */,
+				F8DE924E1D87A08A004DADDD /* NAMineViewController.m in Sources */,
+				F8DE92151D879E5F004DADDD /* NetAPIClient.m in Sources */,
 				F8D763351D792A2800A720FE /* main.m in Sources */,
+				F8DE92171D879E5F004DADDD /* NSObject+Common.m in Sources */,
 				F8F199BB1D7D65C800F34694 /* JXMovableCellTableView.m in Sources */,
+				F8DE924A1D87A08A004DADDD /* NACaoGaoViewController.m in Sources */,
 				F8D763411D792A2800A720FE /* NiceArticle.xcdatamodeld in Sources */,
+				F8DE92491D87A08A004DADDD /* NAArticleItemModel.m in Sources */,
+				F8DE924C1D87A08A004DADDD /* NAHomeViewController.m in Sources */,
+				F8DE92181D879E5F004DADDD /* NSObject+ObjectMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +475,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = mh_dylib;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -471,7 +514,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = mh_dylib;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -481,7 +525,7 @@
 		};
 		F8D7634B1D792A2800A720FE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31B5C892AA1A0EDECB0D12A9 /* Pods-NiceArticle.debug.xcconfig */;
+			baseConfigurationReference = 4652500433CCF8300BD9D819 /* Pods-NiceArticle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NiceArticle/Info.plist;
@@ -493,7 +537,7 @@
 		};
 		F8D7634C1D792A2800A720FE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF4885BD70387C59DCDCDA67 /* Pods-NiceArticle.release.xcconfig */;
+			baseConfigurationReference = 301EC42BA9D4EC753DE64816 /* Pods-NiceArticle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NiceArticle/Info.plist;
