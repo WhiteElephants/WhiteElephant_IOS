@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2EFE2BF112DE0FF347FA4BCA /* Pods_NiceArticle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED81BC293334BE6D05C54447 /* Pods_NiceArticle.framework */; };
+		B9F75EEC1D88FC2200E59863 /* NetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F75EE41D88FC2200E59863 /* NetAPIClient.m */; };
+		B9F75EED1D88FC2200E59863 /* NetAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F75EE61D88FC2200E59863 /* NetAPIManager.m */; };
+		B9F75EEE1D88FC2200E59863 /* NSObject+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F75EE91D88FC2200E59863 /* NSObject+Common.m */; };
+		B9F75EEF1D88FC2200E59863 /* NSObject+ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F75EEB1D88FC2200E59863 /* NSObject+ObjectMap.m */; };
 		F8D763351D792A2800A720FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763341D792A2800A720FE /* main.m */; };
 		F8D763381D792A2800A720FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D763371D792A2800A720FE /* AppDelegate.m */; };
 		F8D763411D792A2800A720FE /* NiceArticle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8D7633F1D792A2800A720FE /* NiceArticle.xcdatamodeld */; };
@@ -30,6 +34,15 @@
 /* Begin PBXFileReference section */
 		17B208CA4BFCABED8528D263 /* Pods-NiceArticle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceArticle.release.xcconfig"; path = "Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle.release.xcconfig"; sourceTree = "<group>"; };
 		57929C07F38C432682F1D9B2 /* Pods-NiceArticle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NiceArticle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NiceArticle/Pods-NiceArticle.debug.xcconfig"; sourceTree = "<group>"; };
+		B9F75EE01D88FB0D00E59863 /* NiceArticle-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NiceArticle-Prefix.pch"; sourceTree = "<group>"; };
+		B9F75EE31D88FC2200E59863 /* NetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetAPIClient.h; sourceTree = "<group>"; };
+		B9F75EE41D88FC2200E59863 /* NetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetAPIClient.m; sourceTree = "<group>"; };
+		B9F75EE51D88FC2200E59863 /* NetAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetAPIManager.h; sourceTree = "<group>"; };
+		B9F75EE61D88FC2200E59863 /* NetAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetAPIManager.m; sourceTree = "<group>"; };
+		B9F75EE81D88FC2200E59863 /* NSObject+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Common.h"; sourceTree = "<group>"; };
+		B9F75EE91D88FC2200E59863 /* NSObject+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Common.m"; sourceTree = "<group>"; };
+		B9F75EEA1D88FC2200E59863 /* NSObject+ObjectMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ObjectMap.h"; sourceTree = "<group>"; };
+		B9F75EEB1D88FC2200E59863 /* NSObject+ObjectMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ObjectMap.m"; sourceTree = "<group>"; };
 		ED81BC293334BE6D05C54447 /* Pods_NiceArticle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NiceArticle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D763301D792A2800A720FE /* NiceArticle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NiceArticle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D763341D792A2800A720FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -93,6 +106,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B9F75EE11D88FC2200E59863 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				B9F75EE21D88FC2200E59863 /* Net_Manager */,
+				B9F75EE71D88FC2200E59863 /* OC_Category */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		B9F75EE21D88FC2200E59863 /* Net_Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B9F75EE31D88FC2200E59863 /* NetAPIClient.h */,
+				B9F75EE41D88FC2200E59863 /* NetAPIClient.m */,
+				B9F75EE51D88FC2200E59863 /* NetAPIManager.h */,
+				B9F75EE61D88FC2200E59863 /* NetAPIManager.m */,
+			);
+			path = Net_Manager;
+			sourceTree = "<group>";
+		};
+		B9F75EE71D88FC2200E59863 /* OC_Category */ = {
+			isa = PBXGroup;
+			children = (
+				B9F75EE81D88FC2200E59863 /* NSObject+Common.h */,
+				B9F75EE91D88FC2200E59863 /* NSObject+Common.m */,
+				B9F75EEA1D88FC2200E59863 /* NSObject+ObjectMap.h */,
+				B9F75EEB1D88FC2200E59863 /* NSObject+ObjectMap.m */,
+			);
+			path = OC_Category;
+			sourceTree = "<group>";
+		};
 		F8D763271D792A2800A720FE = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +158,8 @@
 		F8D763321D792A2800A720FE /* NiceArticle */ = {
 			isa = PBXGroup;
 			children = (
+				B9F75EE11D88FC2200E59863 /* Net */,
+				B9F75EE01D88FB0D00E59863 /* NiceArticle-Prefix.pch */,
 				F8D763671D79630A00A720FE /* library */,
 				F8D7634E1D792AA100A720FE /* modules */,
 				F8D763361D792A2800A720FE /* AppDelegate.h */,
@@ -376,14 +422,18 @@
 				F8D7636A1D79637A00A720FE /* MToastUtil.m in Sources */,
 				F8F199C41D7EB44A00F34694 /* MDeviceUtil.m in Sources */,
 				F8D7635B1D792F0800A720FE /* NAHomeViewController.m in Sources */,
+				B9F75EED1D88FC2200E59863 /* NetAPIManager.m in Sources */,
 				F8DE92621D87CE7B004DADDD /* NAFindViewController.m in Sources */,
 				F8D763381D792A2800A720FE /* AppDelegate.m in Sources */,
 				F8DE92781D87D929004DADDD /* NAAddTextViewCell.m in Sources */,
 				F8DE92551D87CE4A004DADDD /* NACaoGaoViewController.m in Sources */,
 				F8D763351D792A2800A720FE /* main.m in Sources */,
+				B9F75EEC1D88FC2200E59863 /* NetAPIClient.m in Sources */,
 				F8F199BB1D7D65C800F34694 /* JXMovableCellTableView.m in Sources */,
+				B9F75EEE1D88FC2200E59863 /* NSObject+Common.m in Sources */,
 				F8D763411D792A2800A720FE /* NiceArticle.xcdatamodeld in Sources */,
 				F8DE92631D87CE7B004DADDD /* NAAddViewController.m in Sources */,
+				B9F75EEF1D88FC2200E59863 /* NSObject+ObjectMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

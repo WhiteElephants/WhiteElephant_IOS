@@ -1,6 +1,4 @@
-//
-//  Coding-Prefix.pch
-//  Coding
+
 //
 //  Created by Jason on 11/9/15.
 //  Copyright © 2015 Jason. All rights reserved.
@@ -25,4 +23,4 @@
 #define kPaddingLeftWidth 15.0
 
 
-#endif /* Coding_Prefix_pch */
+#endif
