@@ -51,7 +51,7 @@
     NSString *baseURLStr;
     if ([self baseURLStrIsTest]) {
         //staging
-        baseURLStr = kBaseUrlStr_Test;
+        //baseURLStr = kBaseUrlStr_Test;
     }else{
         //生产
         baseURLStr = @"https://xxxx.net/";

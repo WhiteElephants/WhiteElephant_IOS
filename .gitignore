@@ -19,7 +19,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 .DS_Store
-/NiceArticle/Pods/
+Pods/
 .idea/
 *.xcbkptlist
 
