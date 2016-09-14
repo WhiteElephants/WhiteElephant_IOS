@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1909" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="NACollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="218" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="218" height="150"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qK9-rR-buy">
+                        <rect key="frame" x="0.0" y="0.0" width="218" height="150"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qK9-rR-buy" secondAttribute="bottom" id="JL7-wN-Gum"/>
+                <constraint firstItem="qK9-rR-buy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="K2j-TL-7IE"/>
+                <constraint firstAttribute="trailing" secondItem="qK9-rR-buy" secondAttribute="trailing" id="MPa-Pc-aDl"/>
+                <constraint firstItem="qK9-rR-buy" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="hgM-bK-in0"/>
+                <constraint firstItem="qK9-rR-buy" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="la8-cY-FVj"/>
+                <constraint firstItem="qK9-rR-buy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="qub-K8-77b"/>
+            </constraints>
+            <size key="customSize" width="218" height="150"/>
+            <connections>
+                <outlet property="uiImageView" destination="qK9-rR-buy" id="C7A-Hz-Pba"/>
+            </connections>
+            <point key="canvasLocation" x="216" y="205"/>
+        </collectionViewCell>
+    </objects>
+</document>

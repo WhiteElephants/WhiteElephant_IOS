@@ -9,7 +9,9 @@
 #import "NAAddViewController.h"
 #import "MToastUtil.h"
 #import "NAArticleItemModel.h"
+#import "CHTCollectionViewWaterfallLayout.h"
 #import "NAAddTextViewCell.h"
+#import "NAAddImageCollectionViewCell.h"
 
 #define UIColorFromHex(s) [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s & 0xFF00) >>8))/255.0 blue:((s & 0xFF))/255.0 alpha:1.0]
 
@@ -38,6 +40,7 @@
 }
 
 static NSString* reuseId=@"reuse";
+static NSString* reuseImageListId=@"reuseImageListId";
 
 - (void)initUITabbleView{
     self.dataArray=[NSMutableArray new];
@@ -95,6 +98,7 @@ static NSString* reuseId=@"reuse";
     //self.uiTableView.tableHeaderView=[NAArticleItemModel createTableViewHeader:self.uiTableView itemModel:headerModel setDelegate:self];
     self.uiTableView.tableHeaderView=[[NAAddTextViewCell alloc]init];
     [self.uiTableView registerNib:[UINib nibWithNibName:@"NAAddTextViewCell" bundle:nil ] forCellReuseIdentifier:reuseId];
+    [self.uiTableView registerNib:[UINib nibWithNibName:@"NAAddImageCollectionViewCell" bundle:nil ] forCellReuseIdentifier:reuseImageListId];
     
     self.prototypeCell  = [self.uiTableView dequeueReusableCellWithIdentifier:reuseId];
 }
@@ -133,9 +137,14 @@ static NSString* reuseId=@"reuse";
         case IMAGE:
             uiTableViewCell=[NAArticleItemModel createTableViewCellImage:tableView itemModel:itemModel];
             break;
-        case MULTI_IMAGE:
-            uiTableViewCell=[NAArticleItemModel createTableViewCellMultiImage:tableView itemModel:itemModel];
+            case MULTI_IMAGE:{
+            NAAddImageCollectionViewCell *imageListCell=[self.uiTableView dequeueReusableCellWithIdentifier:reuseImageListId forIndexPath:indexPath];
+                
+                uiTableViewCell=imageListCell;
+
+            
             break;
+            }
     }
     return uiTableViewCell;
 }
