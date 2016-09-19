@@ -1,7 +1,6 @@
 /xcuserdata
 *.xcuserdatad
 */xcshareddata
-*.xcworkspace/
 build/
 *.pbxuser
 !default.pbxuser
